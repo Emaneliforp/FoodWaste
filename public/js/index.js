@@ -19,13 +19,14 @@ function setup(){
     loading.style.display = "none";
     loaded.style.display = "block";
     console.log(updateDate(virtualDate));
+    generate(generateCal(updateDate(currentDate)))
   });
 }
 
 function updateDate(d){
   let obj = { 
     year:d.getYear(),
-    month: monthT[d.getMonth()],
+    month: d.getMonth(),
     firstDay: ((d.getDay()+1-(d.getDate())%7)%7<0)?(d.getDay()+1-(d.getDate())%7)%7+6: (d.getDay()+1-(d.getDate())%7)%7-1,
     maxS: (this.firstDay>3)?42:35,
   }
@@ -104,7 +105,8 @@ function generateSpace(arr){
       space.classList.add('spaceList');
     }
     dt.classList.add('dt');
-    
+    console.log('test: '+arr);
+    console.log(currentDate.getDate()+","+currentDate.getMonth()+","+currentDate.getYear());
     if(arr[0] == currentDate.getDate()&&arr[1] == currentDate.getMonth()&&arr[2] == currentDate.getYear()){
       space.classList.add('curDate');
     }
