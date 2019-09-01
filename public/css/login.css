@@ -20,7 +20,6 @@
       75% { transform: translateX(-5%) rotate(-1deg); } 
       100% { transform: translateX(0%); } 
   }
-  
   body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
      background-color: white;
@@ -130,9 +129,6 @@
     left: 0;
     right: 0;
     margin:auto;
-  }
-  #login button{
-   
   }
   .switch{
     color: #15c39a;
