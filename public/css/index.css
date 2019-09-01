@@ -1,3 +1,95 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+body{
+    margin:0;
+}
 #loaded{
     display: none;
 }
+#dayNav{
+    margin-top:2vh;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+  }
+  .day{
+    width: 12.6vw;
+    Text-align: center;
+    padding: 0.5vw;
+    background-color: #c90101;
+    color: white;
+    height: 2vh;
+    border: solid 1.2px #c90101;
+    font-weight: 900;
+  }
+  .space{
+    border: solid 1px lightgray;
+    height: 13vh;
+    overflow: hidden;
+    user-select: none;
+    cursor: pointer;
+  }
+  .spaceList{
+    border: solid 1px lightgray;
+  }
+  .spaceList .dt{
+    float: left;
+  }
+  .spaceList .event{
+    margin-left:1vw;
+  }
+  
+  .dt{
+    width: 1.1vw;
+    padding: 0.2vw 0.5vw 0.2vw 0.5vw;
+  }
+  .event{
+    padding: 0.2vw 0vw 0.2vw 1vw;
+  }
+  .curDate .dt{
+    background-color:rgba(255,215,0, 0.5);
+  }
+  
+  #cal{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    border: solid 2px #c90101;
+  }
+  #calList{
+    border: solid 2px #c90101;
+  }
+  .dot{
+    color: rgb(255, 51, 51);
+    font-weight: 900;
+  }
+  #calNav{
+    background-color: #c90101;
+    color: white;
+    text-align: center;
+    font-size: 2vh;
+    padding-top: 1vh;
+    height:8vh;
+  }
+  #perMonth{
+    margin-left: 7vw;
+  }
+  #month{
+    margin: 2vw;
+  }
+  .calMode{
+    float: right;
+    color: white;
+    background-color: #c90101;
+    border: none;
+    margin-top: 1vh;
+    margin-right: 2vh;
+    cursor: pointer;
+  }
+  .material-icons.md { font-size: 5vw; }
+  .arrow{
+    color: white;
+    cursor: pointer;
+  }
+  .calMode:hover,.arrow:hover{
+    color: #d8d8d8;
+  }
