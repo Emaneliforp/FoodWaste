@@ -70,16 +70,16 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 
 
 function searchRecipe(){
-	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] //id of each textbox
+	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] // id of each textbox
 	let finalParams={}; //final object that will contain all parameters needed in the fetch 
 	for(let i=0;i<allSearchParams.length;i++){
-		if(document.getElementById(allSearchParams[i]).value.length>0 &&document.getElementById(allSearchParams[i]).value.localeCompare("N/A")!=0){ //check length of content in each textbox and makes sure the user did NOT type N/A inside the textbox
-			let term=allSearchParams[i]; //name of parameter
+		let term=allSearchParams[i]; //id of the current textbox 
+		let textBox=document.getElementById(term).value; //get the content from the id of the textbox
+		if(textBox.length>0 && textBox.localeCompare("N/A")!=0){ //check length of content in each textbox and makes sure the user did NOT type N/A inside the textbox
 			// finalParams[term]=document.getElementById(allSearchParams[i]).value.split(',')//save each valid parameter to object
 			finalParams[term]=document.getElementById(allSearchParams[i]).value.replace(/,/g,"%2C%20"); //take the input from text box, replace commas entered by the user with the proper separating punctuation %2C%20
 		}
 		else{ //if the user enters N/A in a textbox, or the textbox is left empty, it will be replaced with N%2FA 
-			let term=allSearchParams[i];
 			finalParams[term]="N%2FA";
 		}
 	}
