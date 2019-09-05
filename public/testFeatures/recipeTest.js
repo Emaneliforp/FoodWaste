@@ -1,5 +1,6 @@
 let x;
 let testParam="262682";
+/*
 fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/informationBulk?ids="+testParam, {
 	"method": "GET",
 	"headers": {
@@ -19,6 +20,7 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 .catch(err => {
 	console.log(err);
 });
+*/
 
 
 function searchRecipe(){
