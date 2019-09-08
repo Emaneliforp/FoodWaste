@@ -2,21 +2,26 @@
     font-family: 'Quicksand', sans-serif;
 }
 body{
-    margin:0;
+  margin:0;
 }
 #loaded{
     display: none;
 }
 #searchBar{
   padding-bottom: 0.5vh;
-  height:5vh;
+  height:4vh;
   text-align: left;
   padding-left: 3vw;
+  padding-top:2vh;
+}
+#searchBar button{
+  float: right;
 }
 #searchBar img{
   width: 10vw;
   vertical-align: bottom;
   float: right;
+  margin-top:-1vh;
 }
 #dayNav{
   display:grid;
@@ -26,6 +31,7 @@ body{
   width: 12.6vw;
   Text-align: center;
   padding: 0.5vw;
+  padding-top:1.5vh;
   background-color: #037971;
   color: white;
   height: 2vh;
@@ -38,6 +44,7 @@ body{
   overflow: hidden;
   user-select: none;
   cursor: pointer;
+  background: white;
 }
 .spaceList{
   border: solid 1px lightgray;
@@ -59,7 +66,11 @@ body{
 .curDate{
   background-color:#B1F8F2;
 }
-
+#month{
+  height: 3vh;
+  font-size: 3vh;
+  font-weight: 900;
+}
 #cal{
   display:grid;
   grid-template-columns: auto auto auto auto auto auto auto;
@@ -77,7 +88,7 @@ body{
   color: white;
   text-align: center;
   font-size: 2vh;
-  height:12vh;
+  height:16vh;
 }
 #perMonth{
   margin-left: 7vw;
@@ -101,4 +112,16 @@ body{
 }
 .calMode:hover,.arrow:hover{
   color: #d8d8d8;
+}
+#bottomNav{
+  position: absolute;
+  bottom:0;
+  background: #037971;
+  height: 8vh;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+#bottomNav i{
+  padding-top: 1vh;
 }

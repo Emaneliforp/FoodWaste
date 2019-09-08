@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
     <title>Food Plan</title>
 
     <!-- update the version number as needed -->
@@ -28,12 +30,12 @@
     <div id="loaded">
       <div id="calendar">
         <div id="calNav">
-          <span id="month"></span>
           <div id="searchBar">
             <input type="text" placeholder="Search">
-            <button>+</button>
             <img src = "assets/shoppingCart.png">
+            <button>+</button>
           </div>
+          <div id="month"></div>
           <div id="dayNav">
             <div class="day">S</div>
             <div class="day">M</div>
@@ -48,6 +50,9 @@
         </div>
       </div>
     </div>
-
+    <div id="bottomNav">
+        <i class="material-icons">calendar_today</i>
+        <i class="material-icons">ballot</i>
+    </div>
   </body>
 </html>
