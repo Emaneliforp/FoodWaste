@@ -15,7 +15,7 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 		console.log(data[0].cuisines)
 		// document.getElementById("testing").innerHTML=data[0].cuisines
 	  });
-	  
+
 })
 .catch(err => {
 	console.log(err);
@@ -25,9 +25,9 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 
 function searchRecipe(){
 	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] // id of each textbox
-	let finalParams={}; //final object that will contain all parameters needed in the fetch 
+	let finalParams={}; //final object that will contain all parameters needed in the fetch
 	for(let i=0;i<allSearchParams.length;i++){
-		let term=allSearchParams[i]; //id of the current textbox 
+		let term=allSearchParams[i]; //id of the current textbox
 		let textBox=document.getElementById(term).value; //get the content from the id of the textbox
 		if(textBox.length>0 && textBox.localeCompare("N/A")!=0){ //check length of content in each textbox and makes sure the user did NOT type N/A inside the textbox
 			// finalParams[term]=document.getElementById(allSearchParams[i]).value.split(',')//save each valid parameter to object
@@ -57,3 +57,37 @@ function searchRecipe(){
 			console.log(err);
 		});
 }
+// Brendan's Front end Code goes here
+document.getElementById("block").style.marginTop =  "-18vh";
+var displaySearch = false;
+var string = document.getElementById("block").style.marginTop;
+string = parseInt(string.substring(0, string.length - 2), 10);
+function showOrHide(){
+if(document.getElementById("block").style.marginTop ==  "0vh"){
+	var i = 0;
+	var int = setInterval(()=>{
+		document.getElementById("block").style.marginTop =  i + "vh";
+		i--;
+		if(i < string){
+			clearInterval(int);
+		}
+	}, 10);
+	displaySearch = false;
+}else{
+	var i = string;
+	var int = setInterval(()=>{
+		document.getElementById("block").style.marginTop =  i + "vh";
+		i++
+		if(i > 0){
+			clearInterval(int);
+		}
+	}, 10);
+	displaySearch = true;
+
+}
+}
+document.getElementById("showButton").addEventListener("click", function(){
+showOrHide();
+searchRecipe();
+});
+//Brendan's Code is above
