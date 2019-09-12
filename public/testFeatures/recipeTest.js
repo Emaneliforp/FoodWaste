@@ -22,7 +22,6 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 });
 */
 
-
 function searchRecipe(){
 	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] // id of each textbox
 	let finalParams={}; //final object that will contain all parameters needed in the fetch

@@ -3,38 +3,35 @@
 }
 form{
   background-color: #15c39a;
-  font-size: 3em;
+  font-size: 5vw;
   position: absolute;
+  padding: 0;
   top: 0;
   left: 0;
   width: 100vw;
   background-image: linear-gradient(to bottom right, #15c39a, #037971);
-  height: 22.5vh;
+  height: 24.5vh;
 }
 button{
   font-size: 1em;
   border-radius: 2vw;
-
 }
 form input{
-  position: relative;
   float: right;
-
-  margin-bottom: 0.1vh;
-  font-size: 4vw;
+  width: 40vw;
+  font-size: 3.7vw;
 }
-
 #searchBig{
   position: absolute;
   top: 7vh;
   left: 10vw;
-  font-size: 7em;
+  font-size: 2em;
   margin-top: 3vh;
   z-index: -1;
 }
 #showButton{
-  margin-top: 1vh;
-  font-size: 1em;
+  margin-top: 2vh;
+  font-size: 17px;
   color: white;
   background-color: white;
   color: #15c39a;
