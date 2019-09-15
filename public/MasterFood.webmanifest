@@ -1,0 +1,9 @@
+{
+    "name": "Master Food",
+    "short_name": "MasterFood",
+    "description": "Master Food",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme": "#20B2AA",
+    "background_color": "#15C39A"
+}
