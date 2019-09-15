@@ -7,6 +7,8 @@
     
     <title>Food Plan</title>
 
+    <link rel="manifest" href="MasterFood.webmanifest">
+
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/6.3.1/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -31,11 +33,11 @@
       <div id="calendar">
         <div id="calNav">
           <div id="searchBar">
-            <input type="text" placeholder="Search">
+            <div id="month"></div>
             <img src = "assets/shoppingCart.png">
             <button>+</button>
           </div>
-          <div id="month"></div>
+          
           <div id="dayNav">
             <div class="day">S</div>
             <div class="day">M</div>
@@ -52,7 +54,8 @@
     </div>
     <div id="bottomNav">
         <i class="material-icons">calendar_today</i>
-        <i class="material-icons">ballot</i>
+        <i class="material-icons">assignment</i>
+        <i class="material-icons">search</i>
     </div>
   </body>
 </html>

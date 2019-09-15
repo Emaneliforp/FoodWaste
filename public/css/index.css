@@ -3,16 +3,21 @@
 }
 body{
   margin:0;
+  overflow-y:hidden;
 }
 #loaded{
     display: none;
 }
 #searchBar{
   padding-bottom: 0.5vh;
-  height:4vh;
+  height:5vh;
   text-align: left;
   padding-left: 3vw;
-  padding-top:2vh;
+  padding-top:3vh;
+}
+#month{
+  display: inline-block;
+  padding-left: 2.5vw;
 }
 #searchBar button{
   float: right;
@@ -31,15 +36,15 @@ body{
   width: 12.6vw;
   Text-align: center;
   padding: 0.5vw;
-  padding-top:1.5vh;
-  background-color: #037971;
+  padding-top:0.5vh;
+  background-color: #20B2AA;
   color: white;
-  height: 2vh;
-  border: solid 1.2px #037971;
+  height: 1vh;
+  border: solid 1.2px #20B2AA;
   font-weight: 900;
 }
 .space{
-  border: solid 1px lightgray;
+  border: solid 0.05vw lightgray;
   height: 13vh;
   overflow: hidden;
   user-select: none;
@@ -64,7 +69,7 @@ body{
   padding: 0.2vw 0vw 0.2vw 1vw;
 }
 .curDate{
-  background-color:#B1F8F2;
+  background-color:#20B2AA;
 }
 #month{
   height: 3vh;
@@ -74,32 +79,29 @@ body{
 #cal{
   display:grid;
   grid-template-columns: auto auto auto auto auto auto auto;
-  border: solid 2px #037971;
+  border: solid 2px #20B2AA;
 }
 #calList{
-  border: solid 2px #037971;
+  border: solid 2px #20B2AA;
 }
 .dot{
   color: #023436;
   font-weight: 900;
 }
 #calNav{
-  background-color: #037971;
+  background-color: #20B2AA;
   color: white;
   text-align: center;
   font-size: 2vh;
-  height:16vh;
+  height: 12vh;
 }
 #perMonth{
   margin-left: 7vw;
 }
-#month{
-  margin: 2vw;
-}
 .calMode{
   float: right;
   color: white;
-  background-color: #037971;
+  background-color: #20B2AA;
   border: none;
   margin-top: 1vh;
   margin-right: 2vh;
@@ -116,7 +118,7 @@ body{
 #bottomNav{
   position: absolute;
   bottom:0;
-  background: #037971;
+  background: #20B2AA;
   height: 8vh;
   width: 100%;
   color: white;
@@ -124,4 +126,6 @@ body{
 }
 #bottomNav i{
   padding-top: 1vh;
+  margin-left: 3vh;
+  margin-right: 3vh;
 }
