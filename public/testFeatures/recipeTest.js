@@ -1,3 +1,5 @@
+
+
 /*
 let x;
 let testParam="262682";
@@ -21,11 +23,19 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 	console.log(err);
 });
 */
+let arrTest=[];
+arrTest.push("hello")
+console.log(arrTest[1])
 
+function deleteChildrens(){ //clear search results 
+	let removeElements = (elms) => elms.forEach(el => el.remove());
+	removeElements( document.querySelectorAll(".results") );
+	
+}
 function searchRecipe(){
 	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] // id of each textbox
 	let finalParams={}; //final object that will contain all parameters needed in the fetch 
-	let x;
+	let x;  
 	for(let i=0;i<allSearchParams.length;i++){
 		let term=allSearchParams[i]; //id of the current textbox 
 		let textBox=document.getElementById(term).value; //get the content from the id of the textbox
@@ -47,10 +57,38 @@ function searchRecipe(){
 		}
 	})
 		.then(response => {
-			
 			response.json().then(data => {
-				console.log(data)
+				deleteChildrens(); //clear search results
 				x=data;
+				console.log(x)
+				console.log(data.results.length)
+				if(data.results.length!=0){
+					console.log(data.results.length)
+					for(let i=0;i<data.results.length;i++){
+						deleteChildrens()
+						/*
+						let x=document.createElement("img");
+						x.setAttribute("src", data.results[i].image);
+						document.body.appendChild(x)
+						*/
+
+						//x.setAttribute("type","checkbox")
+						//x.setAttribute("class", "results"); //give each result the same className
+						//x.setAttribute("id","result "+i);//give each result an id 
+						// let y=document.createElement("checkbox")
+						
+						
+						
+						let y=document.createElement("img");
+						y.setAttribute("src", data.results[i].image);  	
+						document.body.appendChild(y);
+						let x = document.createElement("INPUT");
+						x.setAttribute("type", "checkbox");	
+						document.body.appendChild(x)
+						
+					}
+					console.log(document.getElementsByClassName("results"))
+				}
 			});
 		})
 		.catch(err => {
