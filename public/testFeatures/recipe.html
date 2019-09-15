@@ -4,18 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans|Quicksand" rel="stylesheet" >
+      <link href = "recipe.css" rel = "stylesheet" type = "text/css">
     <title>Document</title>
 </head>
 <body>
-    <div id="testing"></div> 
-    <form>
+    <div id="testing"></div>
+    <form id = "block">
         Food type : <input type="text" name="Fname" id="food_Type">
         <br>Diet : <input type="text" name="Fname" id="diet_">
         <br>Intolerances : <input type="text" name="Fname" id="intolerances_">
         <br>Include Ingredients : <input type="text" name="Fname" id="include_Ingredients">
         <br>Exclude Ingredients : <input type="text" name="Fname" id="exclude_Ingredients">
+        <br> <button type="button" onclick="" id = "showButton">Click Me!</button>
     </form>
-    <button type="button" onclick="searchRecipe()">Click Me!</button>
+    <button type="button" onclick="searchRecipe()">Search Recipes!</button>
+    <button type="button" onclick="deleteChildrens()">Clear Results!</button>
+
+    <div class="container">
+    </div>
+
+    <h1 id = "searchBig">
+     Search
+</h1>
+<!-- <div id="testing"></div>
+    <form id ="block">
+        Food type : <input type="text" name="Fname" id="food_Type">
+        <br>Diet : <input type="text" name="Fname" id="diet_">
+        <br>Intolerances : <input type="text" name="Fname" id="intolerances_">
+        <br>Include Ingredients : <input type="text" name="Fname" id="include_Ingredients">
+        <br>Exclude Ingredients : <input type="text" name="Fname" id="exclude_Ingredients">
+         <br> <button type="button" onclick="searchRecipe()" id = "showButton">Click Me!</button>
+
+    </form>
+    <h1 id = "searchBig">
+       Search
+  </h1>-->
+  <script src="recipeTest.js"></script>
 </body>
-    <script src="recipeTest.js"></script>
+
 </html>
