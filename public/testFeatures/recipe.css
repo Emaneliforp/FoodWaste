@@ -1,7 +1,7 @@
 *{
    font-family: 'Quicksand', sans-serif;
 }
-form{
+#block{
   background-color: #15c39a;
   font-size: 5vw;
   position: absolute;
@@ -12,11 +12,11 @@ form{
   background-image: linear-gradient(to bottom right, #15c39a, #037971);
   height: 24.5vh;
 }
-button{
+#block button{
   font-size: 1em;
   border-radius: 2vw;
 }
-form input{
+#block input{
   float: right;
   width: 40vw;
   font-size: 3.7vw;
@@ -36,4 +36,41 @@ form input{
   background-color: white;
   color: #15c39a;
 
+}
+#numbersPeople{
+  font-size: 6vw !important;
+  display: inline;
+}
+#number{
+  font-size: 6vw;
+  border-color: #15c39a;
+}
+#modalTitle{
+  font-size: 6vw;
+}
+#foodModal{
+  position: absolute;
+  border-radius: 10px;
+  border: 5px black solid;
+  width: 80vw;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 2vw;
+  display: none;
+  background-color: white;
+  margin-top: 30vh;
+}
+#foodModal button{
+  margin-top: 2vh;
+    border: 5px solid #15c39a;
+    height: 5vh;
+    width: 18vw;
+    font-size: 5vw;
+}
+#checkBox{
+  height: 7vw;
+  margin-top: 2vh;
 }
