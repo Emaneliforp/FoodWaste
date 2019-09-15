@@ -13,12 +13,10 @@ let monthMode = true;
 //command
 setup();
 
-
 function setup(){
   DB.ref("test").once('value').then(snapshot =>{
     loading.style.display = "none";
     loaded.style.display = "block";
-    console.log(updateDate(virtualDate));
     generate(generateCal(updateDate(currentDate)))
   });
 }
@@ -28,16 +26,15 @@ function updateDate(d){
     year:d.getYear(),
     month: d.getMonth(),
     firstDay: ((d.getDay()+1-(d.getDate())%7)%7<0)?(d.getDay()+1-(d.getDate())%7)%7+6: (d.getDay()+1-(d.getDate())%7)%7-1,
-    maxS: (this.firstDay>3)?42:35,
   }
   return obj;
 }
 
 function generateCal(obj){
-  let month = obj.month;
+  let month = obj.month+1;
   let year = obj.year;
   let firstDay = obj.firstDay;
-  let maxS = (obj.firstDay>3)?42:35;
+  let maxS = (firstDay>4||firstDay>3&&(month<8&&month%2==1||month>=8&&month%2==0))?42:35;
   let arr = [];
   for(var i = 0, n = 1; i<maxS; i++){
     if(i > firstDay){
@@ -105,8 +102,6 @@ function generateSpace(arr){
       space.classList.add('spaceList');
     }
     dt.classList.add('dt');
-    console.log('test: '+arr);
-    console.log(currentDate.getDate()+","+currentDate.getMonth()+","+currentDate.getYear());
     if(arr[0] == currentDate.getDate()&&arr[1] == currentDate.getMonth()&&arr[2] == currentDate.getYear()){
       space.classList.add('curDate');
     }
@@ -140,11 +135,15 @@ function generateSpace(arr){
     }
     return space;
 }
+function updateMonth(virtualDate){
+  document.getElementById("month").textContent=monthT[virtualDate.getMonth()]+" "+(virtualDate.getFullYear());
+}
 
 function generate(arr){
   calendar.removeChild(cal);
   cal = document.createElement('div');
   cal.id=(monthMode)?'cal':'calList';
+  updateMonth(virtualDate);
   calendar.appendChild(cal);
     for(var i = 0; i<arr.length; i++){
     if(monthMode){
@@ -156,4 +155,32 @@ function generate(arr){
       }
     }
   }
+}
+//change month
+let posX;
+function lock(x){
+  posX = x.changedTouches[0].screenX;
+  console.log(posX);
+}
+let posXf;
+function move(x){
+  posXf = x.changedTouches[0].screenX;
+  console.log(posXf);
+  if(posXf-posX<-50){addMonth()}
+  if(posXf-posX>50){minusMonth()}
+}
+
+document.addEventListener('mousedown', lock, false);
+document.addEventListener('touchstart', lock, false);
+
+document.addEventListener('mouseup', move, false);
+document.addEventListener('touchend', move, false);
+
+function addMonth(){
+  virtualDate.setMonth(virtualDate.getMonth()+1);
+  generate(generateCal(updateDate(virtualDate)));
+}
+function minusMonth(){
+  virtualDate.setMonth(virtualDate.getMonth()-1);
+  generate(generateCal(updateDate(virtualDate)));
 }
