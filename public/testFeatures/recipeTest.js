@@ -23,9 +23,17 @@ fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/infor
 	console.log(err);
 });
 */
-let arrTest=[];
-arrTest.push("hello")
-console.log(arrTest[1])
+
+let apiResult; //result returned from API
+
+
+function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
+	alert(this.id) //get id of clicked element 
+	console.log(this) //use this to get everything out of the clicked item 
+	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item 
+	
+}
+
 
 function deleteChildrens(){ //clear search results 
 	let removeElements = (elms) => elms.forEach(el => el.remove());
@@ -35,7 +43,6 @@ function deleteChildrens(){ //clear search results
 function searchRecipe(){
 	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] // id of each textbox
 	let finalParams={}; //final object that will contain all parameters needed in the fetch 
-	let x;  
 	for(let i=0;i<allSearchParams.length;i++){
 		let term=allSearchParams[i]; //id of the current textbox
 		let textBox=document.getElementById(term).value; //get the content from the id of the textbox
@@ -59,13 +66,12 @@ function searchRecipe(){
 		.then(response => {
 			response.json().then(data => {
 				deleteChildrens(); //clear search results
-				x=data;
-				console.log(x)
-				console.log(data.results.length)
-				if(data.results.length!=0){
-					console.log(data.results.length)
-					for(let i=0;i<data.results.length;i++){
-						deleteChildrens()
+				apiResult=data; //save data passed back from the API 
+				console.log(apiResult)
+				console.log(apiResult.results.length)
+				if(apiResult.results.length!=0){
+					console.log(apiResult.results.length)
+					for(let i=0;i<apiResult.results.length;i++){
 						/*
 						let x=document.createElement("img");
 						x.setAttribute("src", data.results[i].image);
@@ -77,15 +83,19 @@ function searchRecipe(){
 						//x.setAttribute("id","result "+i);//give each result an id 
 						// let y=document.createElement("checkbox")
 						
-						
-						
 						let y=document.createElement("img");
-						y.setAttribute("src", data.results[i].image);  	
+						y.setAttribute("src", apiResult.results[i].image);  
+						y.setAttribute("class", "results"); //add class to delete all results at refresh
+						y.setAttribute("id",i);//give each result an id 
 						
-						document.body.appendChild(y);
+						y.addEventListener("click", recipeClicked) // click listener triggered when an item is clicked 
+						document.body.appendChild(y); 
+
+						/* Makes the checkbox next to each image 
 						let x = document.createElement("INPUT");
 						x.setAttribute("type", "checkbox");	
 						document.body.appendChild(x)
+						*/
 						
 					}
 					console.log(document.getElementsByClassName("results"))
@@ -127,6 +137,7 @@ if(document.getElementById("block").style.marginTop ==  "0vh"){
 }
 document.getElementById("showButton").addEventListener("click", function(){
 showOrHide();
+if(!displaySearch) //when the search menu is up, then it will submit the result 
 searchRecipe();
 });
 //Brendan's Code is above
