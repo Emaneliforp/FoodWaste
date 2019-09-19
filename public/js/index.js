@@ -102,7 +102,8 @@ function generateSpace(arr){
       space.classList.add('spaceList');
     }
     dt.classList.add('dt');
-    if(arr[0] == currentDate.getDate()&&arr[1] == currentDate.getMonth()&&arr[2] == currentDate.getYear()){
+    console.log(arr[0]+" "+currentDate.getDate()+", "+arr[1]+" "+(currentDate.getMonth()+1)+", "+arr[2]+" "+currentDate.getYear());
+    if(arr[0] == currentDate.getDate()&&arr[1] == (currentDate.getMonth()+1)&&arr[2] == currentDate.getYear()){
       space.classList.add('curDate');
     }
     
