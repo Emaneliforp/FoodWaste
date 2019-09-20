@@ -14,6 +14,7 @@ body{
   text-align: left;
   padding-left: 3vw;
   padding-top:3vh;
+  padding-right:2vw;
 }
 #month{
   display: inline-block;
@@ -27,6 +28,13 @@ body{
   vertical-align: bottom;
   float: right;
   margin-top:-1vh;
+}
+#searchBar i{
+  color: white;
+}
+#searchBar i{
+  float: right;
+  padding-right: 2vw;
 }
 #dayNav{
   display:grid;
@@ -69,7 +77,9 @@ body{
   padding: 0.2vw 0vw 0.2vw 1vw;
 }
 .curDate{
-  background-color:#20B2AA;
+  background-color: rgba(32, 178, 170, 0.5);
+  color:white;
+  font-weight: 900;
 }
 #month{
   height: 3vh;
@@ -108,24 +118,22 @@ body{
   cursor: pointer;
 }
 .material-icons.md { font-size: 5vw; }
-.arrow{
-  color: white;
-  cursor: pointer;
-}
-.calMode:hover,.arrow:hover{
-  color: #d8d8d8;
-}
+
 #bottomNav{
-  position: absolute;
   bottom:0;
+  position: absolute;
   background: #20B2AA;
   height: 8vh;
   width: 100%;
-  color: white;
+  padding-top:2vh;
   text-align: center;
 }
-#bottomNav i{
-  padding-top: 1vh;
-  margin-left: 3vh;
-  margin-right: 3vh;
+#bottomNav div{
+  color: white;
+  display: inline-block;
+  font-weight: 900;
+}
+#bottomNav img{
+  width: 8vw;
+  margin-bottom: -1vh;
 }
