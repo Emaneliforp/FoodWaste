@@ -1,37 +1,14 @@
+const FIREBASE_DATABASE = firebase.database();
 
 
-/*
-let x;
-let testParam="262682";
-fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/informationBulk?ids="+testParam, {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
-		"x-rapidapi-key": "9966bea103msh0223a37803d871bp18fb9djsn1b904a1380b2"
-	}
-})
-.then(response => {
-	response.json().then(data => {
-		console.log(data)
-		x=data;
-		console.log(data[0].cuisines)
-		// document.getElementById("testing").innerHTML=data[0].cuisines
-	  });
-
-})
-.catch(err => {
-	console.log(err);
-});
-*/
-
-let apiResult; //result returned from API
+let apiResult; //result object returned from API (further processing is needed to see actual text data )
 
 
 function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
-	alert(this.id) //get id of clicked element
+	alert("Save? "+this.id) //get id of clicked element
 	console.log(this) //use this to get everything out of the clicked item
 	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
-
+	modalPopup(apiResult.results[this.id].title)
 }
 
 
@@ -41,6 +18,11 @@ function deleteChildrens(){ //clear search results
 
 }
 function searchRecipe(){
+	/* Firebase testing works!!
+	FIREBASE_DATABASE.ref('test/').set({
+		username:'hi'
+	})
+	*/
 	let allSearchParams=["food_Type","diet_","intolerances_","include_Ingredients","exclude_Ingredients"] // id of each textbox
 	let finalParams={}; //final object that will contain all parameters needed in the fetch
 	for(let i=0;i<allSearchParams.length;i++){
@@ -87,8 +69,7 @@ function searchRecipe(){
 						y.setAttribute("src", apiResult.results[i].image);
 						y.setAttribute("class", "results"); //add class to delete all results at refresh
 						y.setAttribute("id",i);//give each result an id
-
-						y.addEventListener("click", recipeClicked) // click listener triggered when an item is clicked
+						y.addEventListener("click", recipeClicked) // click listener triggered when an item (search result) is clicked
 						document.body.appendChild(y);
 
 						/* Makes the checkbox next to each image
