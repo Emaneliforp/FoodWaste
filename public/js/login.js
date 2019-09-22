@@ -1,4 +1,18 @@
-document.getElementById("login").style.display = "none";
+// document.getElementById("login").style.display = "none";
+alert("hi")
+let signUp = document.getElementById("signUpBtn");
+
+signUp.addEventListener('click',function(){
+  let email = document.getElementById("signUpEmail").value
+  let pw = document.getElementById("signUpPw").value
+  firebase.auth().createUserWithEmailAndPassword(email,pw).then(function(error){
+      console.log('success')
+  }).catch(function(error){
+      console.log(error)
+  })
+})
+
+
 var onSignUp = true;
 var s = document.getElementsByClassName("switch");
 Array.from(s).forEach(function(element){
@@ -18,3 +32,5 @@ Array.from(s).forEach(function(element){
   }
 });
 });
+
+

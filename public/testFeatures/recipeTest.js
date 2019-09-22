@@ -1,9 +1,18 @@
 const FIREBASE_DATABASE = firebase.database();
-
-
 let apiResult; //result object returned from API (further processing is needed to see actual text data )
 
-
+/*
+FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until current user is fully initialized, before trying to capture user ID 
+    if (user) { //tests to make sure current user is not null
+      console.log("user successful!!");
+      userId=FIREBASE_DATABASE.auth().currentUser.uid; //get the current user's id 
+      console.log(userId)
+    }  
+    else{ //if current user is not detected 
+      console.log("user error!")
+    }
+  });
+*/
 function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
 	alert("Save? "+this.id) //get id of clicked element
 	console.log(this) //use this to get everything out of the clicked item
@@ -17,6 +26,7 @@ function deleteChildrens(){ //clear search results
 	removeElements( document.querySelectorAll(".results") );
 
 }
+
 function searchRecipe(){
 	/* Firebase testing works!!
 	FIREBASE_DATABASE.ref('test/').set({
