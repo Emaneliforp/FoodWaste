@@ -5,10 +5,14 @@ let apiResult; //result object returned from API (further processing is needed t
 
 
 function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
-	alert("Save? "+this.id) //get id of clicked element
 	console.log(this) //use this to get everything out of the clicked item
 	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
+	requestedItems.push({
+		item: apiResult.results[this.id],
+		servings: 0,
+	});
 	modalPopup(apiResult.results[this.id].title)
+
 }
 
 
@@ -70,7 +74,7 @@ function searchRecipe(){
 						y.setAttribute("class", "results"); //add class to delete all results at refresh
 						y.setAttribute("id",i);//give each result an id
 						y.addEventListener("click", recipeClicked) // click listener triggered when an item (search result) is clicked
-						document.body.appendChild(y);
+						document.getElementsByClassName("container")[0].appendChild(y);
 
 						/* Makes the checkbox next to each image
 						let x = document.createElement("INPUT");
@@ -89,6 +93,7 @@ function searchRecipe(){
 }
 // Brendan's Front end Code goes here
 var foodtoBase = [];
+var requestedItems = [];
 document.getElementById("block").style.marginTop =  "-18vh";
 var displaySearch = false;
 function showOrHide(){
@@ -111,11 +116,8 @@ function modalPopup(foodTitle){
   modal.style.display = "inline-block";
 }
 var postFood = () =>{
-	var newItem = {
-		food: document.getElementById("modalTitle").innerHTML,
-		servings: document.getElementById("number").value,
-	}
-	foodtoBase.push(newItem);
+	requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
+	foodtoBase.push(requestedItems[requestedItems.length-1]);
 	modal.style.display = "none";
 }
 window.onclick = function(event) {

@@ -149,3 +149,201 @@
 [debug] [2019-09-22T15:17:18.341Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
 [warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
 [info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-09-22T15:20:33.440Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T15:20:33.443Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T15:20:33.443Z] CLI Version:   7.3.2
+[debug] [2019-09-22T15:20:33.443Z] Platform:      win32
+[debug] [2019-09-22T15:20:33.443Z] Node Version:  v8.11.3
+[debug] [2019-09-22T15:20:33.444Z] Time:          Sun Sep 22 2019 08:20:33 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-22T15:20:33.444Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-22T15:20:33.453Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T15:20:33.454Z] > authorizing via signed-in user
+[debug] [2019-09-22T15:20:33.454Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T15:20:33.456Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-09-22T15:20:33.981Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T15:20:33.983Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-09-22T15:20:34.386Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-09-22T15:20:34.403Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-22T15:20:34.999Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-22T15:20:35.773Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-09-22T15:20:35.773Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T15:20:35.778Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-09-22T15:25:30.940Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T15:25:30.943Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T15:25:30.943Z] CLI Version:   7.3.2
+[debug] [2019-09-22T15:25:30.943Z] Platform:      win32
+[debug] [2019-09-22T15:25:30.943Z] Node Version:  v8.11.3
+[debug] [2019-09-22T15:25:30.944Z] Time:          Sun Sep 22 2019 08:25:30 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-22T15:25:30.944Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-22T15:25:30.954Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T15:25:30.955Z] > authorizing via signed-in user
+[debug] [2019-09-22T15:25:30.955Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T15:25:30.957Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-09-22T15:25:31.452Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T15:25:31.456Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-09-22T15:25:31.882Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-09-22T15:26:27.043Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-22T15:26:27.567Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-22T15:26:28.373Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-09-22T15:26:28.374Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T15:26:28.383Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-09-22T15:26:39.633Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T15:26:39.636Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T15:26:39.636Z] CLI Version:   7.3.2
+[debug] [2019-09-22T15:26:39.636Z] Platform:      win32
+[debug] [2019-09-22T15:26:39.636Z] Node Version:  v8.11.3
+[debug] [2019-09-22T15:26:39.637Z] Time:          Sun Sep 22 2019 08:26:39 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-22T15:26:39.637Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-22T15:26:39.648Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T15:26:39.649Z] > authorizing via signed-in user
+[debug] [2019-09-22T15:26:39.649Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T15:26:39.651Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-09-22T15:26:40.276Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T15:26:40.281Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-09-22T15:26:40.777Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-09-22T15:26:40.794Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-22T15:26:41.391Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-22T15:26:42.479Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-09-22T15:26:42.479Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T15:26:42.484Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-09-22T15:45:21.179Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T15:45:21.182Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T15:45:21.182Z] CLI Version:   7.3.2
+[debug] [2019-09-22T15:45:21.182Z] Platform:      win32
+[debug] [2019-09-22T15:45:21.182Z] Node Version:  v8.11.3
+[debug] [2019-09-22T15:45:21.197Z] Time:          Sun Sep 22 2019 08:45:21 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-22T15:45:21.198Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-22T15:45:21.221Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T15:45:21.223Z] > authorizing via signed-in user
+[debug] [2019-09-22T15:45:21.223Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T15:45:21.227Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-09-22T15:45:21.886Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T15:45:21.888Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-09-22T15:45:22.173Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-09-22T15:45:22.190Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-22T15:45:22.787Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-22T15:45:23.564Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-09-22T15:45:23.564Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T15:45:23.568Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-09-22T15:47:14.712Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T15:47:14.714Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T15:47:14.715Z] CLI Version:   7.3.2
+[debug] [2019-09-22T15:47:14.715Z] Platform:      win32
+[debug] [2019-09-22T15:47:14.715Z] Node Version:  v8.11.3
+[debug] [2019-09-22T15:47:14.715Z] Time:          Sun Sep 22 2019 08:47:14 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-22T15:47:14.715Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-22T15:47:14.726Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T15:47:14.727Z] > authorizing via signed-in user
+[debug] [2019-09-22T15:47:14.727Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T15:47:14.729Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-09-22T15:47:15.465Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T15:47:15.467Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-09-22T15:47:15.755Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-09-22T15:47:15.772Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-22T15:47:16.145Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-22T15:47:16.942Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-09-22T15:47:16.942Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T15:47:16.949Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-09-22T15:53:16.654Z] ----------------------------------------------------------------------
+[debug] [2019-09-22T15:53:16.656Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-09-22T15:53:16.656Z] CLI Version:   7.3.2
+[debug] [2019-09-22T15:53:16.657Z] Platform:      win32
+[debug] [2019-09-22T15:53:16.657Z] Node Version:  v8.11.3
+[debug] [2019-09-22T15:53:16.657Z] Time:          Sun Sep 22 2019 08:53:16 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-09-22T15:53:16.657Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-22T15:53:16.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-22T15:53:16.668Z] > authorizing via signed-in user
+[debug] [2019-09-22T15:53:16.668Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-09-22T15:53:16.670Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-09-22T15:53:17.321Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-22T15:53:17.322Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-09-22T15:53:17.929Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-09-22T15:53:17.943Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-22T15:53:18.645Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-22T15:53:19.534Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-09-22T15:53:19.534Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-22T15:53:19.540Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)

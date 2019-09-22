@@ -1,10 +1,13 @@
 *{
    font-family: 'Quicksand', sans-serif;
 }
+body{
+  background-color: #b1f8f2;
+}
 #block{
   background-color: #15c39a;
   font-size: 5vw;
-  position: absolute;
+  position: fixed;
   padding: 0;
   top: 0;
   left: 0;
@@ -16,7 +19,7 @@
 #block button{
   font-size: 1em;
   border-radius: 2vw;
-
+  margin-left: 2vw;
 }
 #block input{
   float: right;
@@ -77,3 +80,12 @@
   margin-top: 2vh;
 }
 /*new changes*/
+.container{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 5vh;
+}
