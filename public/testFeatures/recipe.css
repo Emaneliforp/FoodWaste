@@ -1,20 +1,25 @@
 *{
    font-family: 'Quicksand', sans-serif;
 }
+body{
+  background-color: #b1f8f2;
+}
 #block{
   background-color: #15c39a;
   font-size: 5vw;
-  position: absolute;
+  position: fixed;
   padding: 0;
   top: 0;
   left: 0;
   width: 100vw;
   background-image: linear-gradient(to bottom right, #15c39a, #037971);
   height: 24.5vh;
+  transition: 0.6s cubic-bezier(0,.49,.25,1);
 }
 #block button{
   font-size: 1em;
   border-radius: 2vw;
+  margin-left: 2vw;
 }
 #block input{
   float: right;
@@ -73,4 +78,15 @@
 #checkBox{
   height: 7vw;
   margin-top: 2vh;
+}
+/*new changes*/
+.container{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
 }

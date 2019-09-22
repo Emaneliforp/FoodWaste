@@ -4,8 +4,14 @@
 <head>
   <link href = "css/login.css" rel ="stylesheet" type = "text/css"> 
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-  <title>
-</title>
+
+<script defer src="/__/firebase/6.6.1/firebase-app.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/6.6.1/firebase-auth.js"></script>
+ <!-- initialize the SDK after all desired features are loaded -->
+ <script defer src="/__/firebase/init.js"></script>
+ <script defer src="login.js"></script>
+
   </head>
   <body id ="body">
 
@@ -23,11 +29,11 @@
     <div id = "signUp" class = "formFrame">
       <div class ="form">
         <form>
-          <input placeholder = "Username"><br>
-          <input placeholder = "Password" type = "password"><br>
-          <input placeholder  ="Email Address"><br>
+          <input placeholder  ="Email Address" id="signUpEmail"><br>
+          <input placeholder = "Password" type = "password" id="signUpPw"><br>
           
-          <button type = "submit">
+          
+          <button type = "submit" id="signUpBtn">
             Register!
           </button>
           <h5 class = "wrongPage">
