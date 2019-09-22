@@ -14,10 +14,14 @@ FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until curre
   });
 */
 function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
-	alert("Save? "+this.id) //get id of clicked element
 	console.log(this) //use this to get everything out of the clicked item
 	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
+	requestedItems.push({
+		item: apiResult.results[this.id],
+		servings: 0,
+	});
 	modalPopup(apiResult.results[this.id].title)
+
 }
 
 
@@ -80,7 +84,7 @@ function searchRecipe(){
 						y.setAttribute("class", "results"); //add class to delete all results at refresh
 						y.setAttribute("id",i);//give each result an id
 						y.addEventListener("click", recipeClicked) // click listener triggered when an item (search result) is clicked
-						document.body.appendChild(y);
+						document.getElementsByClassName("container")[0].appendChild(y);
 
 						/* Makes the checkbox next to each image
 						let x = document.createElement("INPUT");
@@ -98,33 +102,18 @@ function searchRecipe(){
 		});
 }
 // Brendan's Front end Code goes here
+var foodtoBase = [];
+var requestedItems = [];
 document.getElementById("block").style.marginTop =  "-18vh";
 var displaySearch = false;
-var string = document.getElementById("block").style.marginTop;
-string = parseInt(string.substring(0, string.length - 2), 10);
 function showOrHide(){
-if(document.getElementById("block").style.marginTop ==  "0vh"){
-	var i = 0;
-	var int = setInterval(()=>{
-		document.getElementById("block").style.marginTop =  i + "vh";
-		i--;
-		if(i < string){
-			clearInterval(int);
-		}
-	}, 10);
-	displaySearch = false;
-}else{
-	var i = string;
-	var int = setInterval(()=>{
-		document.getElementById("block").style.marginTop =  i + "vh";
-		i++
-		if(i > 0){
-			clearInterval(int);
-		}
-	}, 10);
-	displaySearch = true;
-
-}
+	if(displaySearch){
+		document.getElementById("block").style.marginTop =  "-18vh";
+		displaySearch = false;
+	}else{
+		document.getElementById("block").style.marginTop = "-0vh";
+		displaySearch = true;
+	}
 }
 document.getElementById("showButton").addEventListener("click", function(){
 showOrHide();
@@ -136,10 +125,15 @@ function modalPopup(foodTitle){
   document.getElementById("modalTitle").innerHTML = foodTitle;
   modal.style.display = "inline-block";
 }
-
+var postFood = () =>{
+	requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
+	foodtoBase.push(requestedItems[requestedItems.length-1]);
+	modal.style.display = "none";
+}
 window.onclick = function(event) {
-  if (event.target !== modal ) {
+  if (event.target !== modal && (event.target).parentNode.id !== "foodModal" && event.target.className !== "inModal" && event.target.id == "numbersPeople") {
     modal.style.display = "none";
+		console.log(event.target.parentNode);
   }
 }
 //Brendan's Code is above

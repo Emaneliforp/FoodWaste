@@ -26,30 +26,28 @@
         <br>Intolerances : <input type="text" name="Fname" id="intolerances_">
         <br>Include Ingredients : <input type="text" name="Fname" id="include_Ingredients">
         <br>Exclude Ingredients : <input type="text" name="Fname" id="exclude_Ingredients">
-        <br> <button type="button" onclick="" id = "showButton">Click Me!</button>
+        <br> <button type="button" onclick="" id = "showButton">Search</button>
     </form>
     <button type="button" onclick="searchRecipe()">Search Recipes!</button>
     <button type="button" onclick="deleteChildrens()">Clear Results!</button>
     <div id ="foodModal">
-    <h2 id = "modalTitle">
+    <h2 id = "modalTitle" class = "inModal">
         INNER HTML
     </h2>
 
-    <form id ="numbersPeople">
+    <form id ="numbersPeople" class = "inModal">
       <span>
           Number of People:
       </span>
-        <input type = "number" name ="quantity" min ="1" max= "50" id = "number"> <br>
-        <img src = "https://cdn.glitch.com/6cbd3aa6-6c64-4319-8982-edc14ceb6d53%2F24px%20(1).svg?v=1568570589001" id = "checkBox">
+        <input type = "number" name ="quantity" min ="1" max= "50" id = "number" class = "inModal"> <br>
+        <img src = "https://cdn.glitch.com/6cbd3aa6-6c64-4319-8982-edc14ceb6d53%2F24px%20(1).svg?v=1568570589001" id = "checkBox" onclick = "postFood()">
 
     </form>
   </div>
     <div class="container">
     </div>
 
-    <h1 id = "searchBig">
-     Search
-</h1>
+
 <!-- <div id="testing"></div>
     <form id ="block">
         Food type : <input type="text" name="Fname" id="food_Type">
@@ -63,8 +61,8 @@
     <h1 id = "searchBig">
        Search
   </h1>-->
-  
-  
+
+
 </body>
 
 </html>
