@@ -88,33 +88,17 @@ function searchRecipe(){
 		});
 }
 // Brendan's Front end Code goes here
+var foodtoBase = [];
 document.getElementById("block").style.marginTop =  "-18vh";
 var displaySearch = false;
-var string = document.getElementById("block").style.marginTop;
-string = parseInt(string.substring(0, string.length - 2), 10);
 function showOrHide(){
-if(document.getElementById("block").style.marginTop ==  "0vh"){
-	var i = 0;
-	var int = setInterval(()=>{
-		document.getElementById("block").style.marginTop =  i + "vh";
-		i--;
-		if(i < string){
-			clearInterval(int);
-		}
-	}, 10);
-	displaySearch = false;
-}else{
-	var i = string;
-	var int = setInterval(()=>{
-		document.getElementById("block").style.marginTop =  i + "vh";
-		i++
-		if(i > 0){
-			clearInterval(int);
-		}
-	}, 10);
-	displaySearch = true;
-
-}
+	if(displaySearch){
+		document.getElementById("block").style.marginTop =  "-18vh";
+		displaySearch = false;
+	}else{
+		document.getElementById("block").style.marginTop = "-0vh";
+		displaySearch = true;
+	}
 }
 document.getElementById("showButton").addEventListener("click", function(){
 showOrHide();
@@ -126,10 +110,18 @@ function modalPopup(foodTitle){
   document.getElementById("modalTitle").innerHTML = foodTitle;
   modal.style.display = "inline-block";
 }
-
+var postFood = () =>{
+	var newItem = {
+		food: document.getElementById("modalTitle").innerHTML,
+		servings: document.getElementById("number").value,
+	}
+	foodtoBase.push(newItem);
+	modal.style.display = "none";
+}
 window.onclick = function(event) {
-  if (event.target !== modal ) {
+  if (event.target !== modal && (event.target).parentNode.id !== "foodModal" && event.target.className !== "inModal" && event.target.id == "numbersPeople") {
     modal.style.display = "none";
+		console.log(event.target.parentNode);
   }
 }
 //Brendan's Code is above
