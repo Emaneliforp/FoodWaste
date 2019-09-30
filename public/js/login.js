@@ -31,9 +31,7 @@ Array.from(s).forEach(function(element){
      document.getElementById("signUp").style.display = "inline-block";
     document.getElementsByClassName("formFrame")[0].style.animationDuration = "3s";
     document.getElementsByClassName("formFrame")[0].style.animationName = "wobble";
-    onSignUp = true; 
+    onSignUp = true;
   }
 });
 });
-
-

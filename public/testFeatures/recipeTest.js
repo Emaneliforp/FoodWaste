@@ -2,13 +2,13 @@ const FIREBASE_DATABASE = firebase.database();
 let apiResult; //result object returned from API (further processing is needed to see actual text data )
 
 /*
-FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until current user is fully initialized, before trying to capture user ID 
+FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until current user is fully initialized, before trying to capture user ID
     if (user) { //tests to make sure current user is not null
       console.log("user successful!!");
-      userId=FIREBASE_DATABASE.auth().currentUser.uid; //get the current user's id 
+      userId=FIREBASE_DATABASE.auth().currentUser.uid; //get the current user's id
       console.log(userId)
-    }  
-    else{ //if current user is not detected 
+    }
+    else{ //if current user is not detected
       console.log("user error!")
     }
   });
@@ -17,7 +17,7 @@ function recipeClicked(){ //once image is clicked, id is returned with the API d
 	console.log(this) //use this to get everything out of the clicked item
 	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
 	requestedItems.push({
-		item: apiResult.results[this.id],
+		foodType: apiResult.results[this.id],
 		servings: 0,
 	});
 	modalPopup(apiResult.results[this.id].title)
@@ -101,7 +101,7 @@ function searchRecipe(){
 			console.log(err);
 		});
 }
-// Brendan's Front end Code goes here
+// Brendan's Front end (and i guess some back end stuff too) Code goes here
 var foodtoBase = [];
 var requestedItems = [];
 document.getElementById("block").style.marginTop =  "-18vh";
@@ -129,6 +129,9 @@ var postFood = () =>{
 	requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
 	foodtoBase.push(requestedItems[requestedItems.length-1]);
 	modal.style.display = "none";
+				FIREBASE_DATABASE.ref("recipesSent").push(requestedItems[requestedItems.length-1]).then(function(){
+			  console.log("pushed yay");
+			});
 }
 window.onclick = function(event) {
   if (event.target !== modal && (event.target).parentNode.id !== "foodModal" && event.target.className !== "inModal" && event.target.id == "numbersPeople") {
@@ -136,4 +139,5 @@ window.onclick = function(event) {
 		console.log(event.target.parentNode);
   }
 }
+
 //Brendan's Code is above
