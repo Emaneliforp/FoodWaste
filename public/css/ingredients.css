@@ -3,6 +3,7 @@
 }
 body{
     margin: 0;
+    background: #EEEEEE;
 }
 #nav{
     position: absolute;
@@ -35,5 +36,26 @@ body{
     float: left;
 }
 #list{
-    margin-top: 9vh;
+    margin-top: 12vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+.item{
+    background: white;
+    border-radius: 2vw;
+    padding:2vw;
+    margin-top: 2vh;
+}
+.item .itemName{
+    color:#20B2AA;
+    font-weight: 900;
+}
+.item img{
+    width:20vw;
+    display: inline-block;
+}
+.item .quan{
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 1vw;
 }

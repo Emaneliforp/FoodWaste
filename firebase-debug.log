@@ -314,3 +314,43 @@
 >>>>>>> a61efa1522a97da9093208c2e19927d7a12bc98d
 [warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
 [info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-10-06T15:35:31.323Z] ----------------------------------------------------------------------
+[debug] [2019-10-06T15:35:31.329Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\kietc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-10-06T15:35:31.330Z] CLI Version:   7.2.2
+[debug] [2019-10-06T15:35:31.330Z] Platform:      win32
+[debug] [2019-10-06T15:35:31.330Z] Node Version:  v10.8.0
+[debug] [2019-10-06T15:35:31.333Z] Time:          Sun Oct 06 2019 08:35:31 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-10-06T15:35:31.333Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-06T15:35:31.362Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-06T15:35:31.362Z] > authorizing via signed-in user
+[debug] [2019-10-06T15:35:31.363Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-10-06T15:35:31.367Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-06T15:35:31.367Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-06T15:35:31.989Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-06T15:35:31.997Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-10-06T15:35:33.101Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-06T15:35:33.102Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-10-06T15:35:33.510Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\kietc\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-10-06T15:35:33.527Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[debug] [2019-10-06T15:35:33.556Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/adminSdkConfig  
+ 
+[debug] [2019-10-06T15:35:33.870Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-06T15:35:34.007Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "C:\Users\kietc\Desktop\FoodWaste\functions" for Cloud Functions...
+[debug] [2019-10-06T15:35:34.862Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\kietc\\Desktop\\FoodWaste\\functions","node_version":"10.8.0"}
+[debug] [2019-10-06T15:35:34.862Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-06T15:35:34.867Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\kietc\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)

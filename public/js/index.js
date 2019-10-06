@@ -160,15 +160,19 @@ function generate(arr){
 //change month
 let posX;
 function lock(x){
-  posX = x.changedTouches[0].screenX;
-  console.log(posX);
+  if(x.changedTouches!=null){
+    posX = x.changedTouches[0].screenX;
+    console.log(posX);
+  }
 }
 let posXf;
 function move(x){
+  if(x.changedTouches!=null){
   posXf = x.changedTouches[0].screenX;
   console.log(posXf);
   if(posXf-posX<-50){addMonth()}
   if(posXf-posX>50){minusMonth()}
+  }
 }
 
 document.addEventListener('mousedown', lock, false);
@@ -185,3 +189,6 @@ function minusMonth(){
   virtualDate.setMonth(virtualDate.getMonth()-1);
   generate(generateCal(updateDate(virtualDate)));
 }
+
+/*
+}*/
