@@ -10,6 +10,8 @@ let virtualDate = new Date();
 let monthT = ['January', 'Feburary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let monthMode = true;
 
+
+
 //command
 setup();
 
@@ -20,9 +22,21 @@ function setup(){
     generate(generateCal(updateDate(currentDate)))
   });
 }
+DB.ref("test").once('value').then(snapshot=>{
+  check();
+})
+  var check = () =>{
+    var user = firebase.auth().currentUser;
+    console.log(user);
+    if (user != null) {
+      console.log('success');
+    }else{
+      window.location.replace("login.html");
+    }
+  };
 
 function updateDate(d){
-  let obj = { 
+  let obj = {
     year:d.getYear(),
     month: d.getMonth(),
     firstDay: ((d.getDay()+1-(d.getDate())%7)%7<0)?(d.getDay()+1-(d.getDate())%7)%7+6: (d.getDay()+1-(d.getDate())%7)%7-1,
@@ -106,7 +120,7 @@ function generateSpace(arr){
     if(arr[0] == currentDate.getDate()&&arr[1] == (currentDate.getMonth()+1)&&arr[2] == currentDate.getYear()){
       space.classList.add('curDate');
     }
-    
+
     dt.textContent = arr[0];
     space.appendChild(dt);
     for(var a = 3; a < arr.length; a++){
@@ -115,18 +129,18 @@ function generateSpace(arr){
         let title = document.createElement('span');
         let dot = document.createElement('span');
         let more = document.createElement('div');
-  
+
         event.classList.add('event');
         dot.classList.add('dot');
         more.classList.add('more');
         more.classList.add('event');
         more.textContent="\u2022 \u2022 \u2022";
-        
+
         if(a==5){
           space.appendChild(more);
           break;
         }
-        
+
         dot.textContent="\u2022 ";
         title.textContent = arr[a];
         event.appendChild(dot);
@@ -189,6 +203,3 @@ function minusMonth(){
   virtualDate.setMonth(virtualDate.getMonth()-1);
   generate(generateCal(updateDate(virtualDate)));
 }
-
-/*
-}*/

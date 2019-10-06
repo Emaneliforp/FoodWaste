@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
-  <link href = "css/login.css" rel ="stylesheet" type = "text/css"> 
+  <link href = "css/login.css" rel ="stylesheet" type = "text/css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <script defer src="https://www.gstatic.com/firebasejs/6.6.1/firebase.js"></script>
-<script defer src="/__/firebase/6.6.1/firebase-app.js"></script>
-<!-- include only the Firebase features as you need -->
-<script defer src="/__/firebase/6.6.1/firebase-auth.js"></script>
- <!-- initialize the SDK after all desired features are loaded -->
- <script defer src="/__/firebase/init.js"></script>
- <script defer src="login.js"></script>
+  <script defer src="/__/firebase/6.3.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/6.3.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/6.3.1/firebase-database.js"></script>
+  <script defer src="/__/firebase/6.3.1/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/6.3.1/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+<script defer src = "js/login.js"></script>
 
   </head>
   <body id ="body">
 
 
     <img id = "cornerLogo" src = "https://cdn.glitch.com/9df59a70-e764-4349-adfc-40bb174bf168%2FNew%20Project%20(19).png?v=1566344956715">
-  
-  
+
+
     <div id = "logoFrame">
-       <img id ="bkgn"  src = "https://cdn.glitch.com/9df59a70-e764-4349-adfc-40bb174bf168%2FNew%20Project%20(20).png?v=1566949410511"> 
-      
+       <img id ="bkgn"  src = "https://cdn.glitch.com/9df59a70-e764-4349-adfc-40bb174bf168%2FNew%20Project%20(20).png?v=1566949410511">
+
     </div>
     <h2 id = "encouragement">
       Create shopping lists, track expiration dates, and prepare meal plans with Master Food!
@@ -31,35 +34,35 @@
         <form>
           <input placeholder  ="Email Address" id="signUpEmail"><br>
           <input placeholder = "Password" type = "password" id="signUpPw"><br>
-          
-          
-          <button type = "submit" id="signUpBtn">
+
+
+          <button  id="signUpBtn">
             Register!
           </button>
           <h5 class = "wrongPage">
              Already have an account? <span class = "switch">Sign In</span>
           </h5>
         </form>
-      </div>  
+      </div>
     </div>
     <div id = "login" class = "formFrame">
       <div class = "form">
-        
-     
+
+
       <form>
-          <input placeholder = "Username"><br>
-          <input placeholder = "Password" type = "password"><br>
-       
-          <button type = "submit">
+          <input placeholder = "Username" id="loginEmail"><br>
+          <input placeholder = "Password" type = "password" id="loginPw"><br>
+
+          <button id="loginBtn" type = "button">
             Login!
           </button>
           <h5 class = "wrongPage">
              Don't have an account? <span class = "switch">Sign Up!</span>
           </h5>
         </form>
-        
+
     </div>
     </div>
   </body>
-  <script src = "js/login.js"></script>
+
 </html>
