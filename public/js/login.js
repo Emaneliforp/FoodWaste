@@ -1,6 +1,22 @@
 // document.getElementById("login").style.display = "none";
 
 let signUp = document.getElementById("signUpBtn");
+let loginBtn = document.getElementById("loginBtn");
+alert('hi')
+
+loginBtn.addEventListener('click',function(){
+  alert('hi')
+  let email=document.getElementById("loginEmail").value;
+  console.log(email)
+    let pw=document.getElementById("loginPw").value;
+    console.log(pw)
+    firebase.auth().signInWithEmailAndPassword(email,pw).then(function(){
+        console.log('success')
+        alert('hiiii')
+    }).catch(function(error){
+        console.log(error)
+    })
+})
 
 signUp.addEventListener('click',function(){
   let email = document.getElementById("signUpEmail").value
