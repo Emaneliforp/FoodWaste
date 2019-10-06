@@ -16,10 +16,16 @@ FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until curre
 function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
 	console.log(this) //use this to get everything out of the clicked item
 	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
+	/*
 	requestedItems.push({
 		foodType: apiResult.results[this.id],
 		servings: 0,
 	});
+	*/
+	requestedItems={
+		foodType: apiResult.results[this.id],
+		servings: 0,
+	}
 	modalPopup(apiResult.results[this.id].title)
 
 }
@@ -102,8 +108,8 @@ function searchRecipe(){
 		});
 }
 // Brendan's Front end (and i guess some back end stuff too) Code goes here
-var foodtoBase = [];
-var requestedItems = [];
+// var foodtoBase = [];
+var requestedItems = {};
 document.getElementById("block").style.marginTop =  "-18vh";
 var displaySearch = false;
 function showOrHide(){
@@ -125,11 +131,13 @@ function modalPopup(foodTitle){
   document.getElementById("modalTitle").innerHTML = foodTitle;
   modal.style.display = "inline-block";
 }
+
 var postFood = () =>{
-	requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
-	foodtoBase.push(requestedItems[requestedItems.length-1]);
+	// requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
+	requestedItems.servings = document.getElementById("number").value;
+	// foodtoBase.push(requestedItems[requestedItems.length-1]);
 	modal.style.display = "none";
-				FIREBASE_DATABASE.ref("recipesSent").push(requestedItems[requestedItems.length-1]).then(function(){
+				FIREBASE_DATABASE.ref("recipesSent").push(requestedItems).then(function(){
 			  console.log("pushed yay");
 			});
 }
