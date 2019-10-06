@@ -11,7 +11,7 @@ loginBtn.addEventListener('click',function(){
   pw = pw.toString();
   firebase.auth().signInWithEmailAndPassword(email,pw).then(function(){
         console.log('success');
-        alert('hiiii');
+        
         window.location.replace("index.html");
     }).catch(function(error){
         console.log(error);
