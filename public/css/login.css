@@ -3,28 +3,28 @@
     font-family: 'Quicksand', sans-serif;
   }
   @keyframes wobble {
-     0% { transform: translateX(0%); } 
-     15% { transform: translateX(-25%) rotate(-5deg); } 
-     30% { transform: translateX(20%) rotate(3deg); } 
-     45% { transform: translateX(-15%) rotate(-3deg); } 
+     0% { transform: translateX(0%); }
+     15% { transform: translateX(-25%) rotate(-5deg); }
+     30% { transform: translateX(20%) rotate(3deg); }
+     45% { transform: translateX(-15%) rotate(-3deg); }
      60% { transform: translateX(10%) rotate(2deg); }
      75% { transform: translateX(-5%) rotate(-1deg); }
-     100% { transform: translateX(0%); } 
-  } 
-   @keyframes wobble { 
-      0% { transform: translateX(0%); } 
-      15% { transform: translateX(-25%) rotate(-5deg); } 
-      30% { transform: translateX(20%) rotate(3deg); } 
-      45% { transform: translateX(-15%) rotate(-3deg); } 
-      60% { transform: translateX(10%) rotate(2deg); } 
-      75% { transform: translateX(-5%) rotate(-1deg); } 
-      100% { transform: translateX(0%); } 
+     100% { transform: translateX(0%); }
+  }
+   @keyframes wobble {
+      0% { transform: translateX(0%); }
+      15% { transform: translateX(-25%) rotate(-5deg); }
+      30% { transform: translateX(20%) rotate(3deg); }
+      45% { transform: translateX(-15%) rotate(-3deg); }
+      60% { transform: translateX(10%) rotate(2deg); }
+      75% { transform: translateX(-5%) rotate(-1deg); }
+      100% { transform: translateX(0%); }
   }
   body {
     font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
      background-color: white;
    overflow: hidden;
-  }  
+  }
   h1 {
     font-style: italic;
     color: #373fff;
@@ -48,10 +48,10 @@
     margin-bottom: 70px;
     border-radius: 2vw;
     border: 2px solid #119c7b;
-    caret-color: white;
+    
     outline: none;
   }
-  .formFrame{  
+  .formFrame{
     position: absolute;
     top: 25vh;
     background-color: white;
@@ -92,20 +92,20 @@
     margin-bottom: 1vh;
   }*/
   #logoFrame{
-    
+
     position: absolute;
    right: 0;
     top: 0;
     height: 60vh;
     width: 100%;
-    
+
     background-color: rgba(0,0,0);
-    
+
   }
   #bkgn{
     opacity: 1;
     height: 100%;
-    
+
       transform: rotate(180deg);
     width: 100%;
   }
