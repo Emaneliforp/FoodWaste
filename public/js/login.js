@@ -1,23 +1,36 @@
-// document.getElementById("login").style.display = "none";
-
+const DB = firebase.database();
 let signUp = document.getElementById("signUpBtn");
 let loginBtn = document.getElementById("loginBtn");
-alert('hi')
 
 loginBtn.addEventListener('click',function(){
-  alert('hi')
   let email=document.getElementById("loginEmail").value;
-  console.log(email)
-    let pw=document.getElementById("loginPw").value;
-    console.log(pw)
-    firebase.auth().signInWithEmailAndPassword(email,pw).then(function(){
-        console.log('success')
-        alert('hiiii')
+  email = email.toString();
+  console.log(email);
+  let pw=document.getElementById("loginPw").value;
+  console.log(pw);
+  pw = pw.toString();
+  firebase.auth().signInWithEmailAndPassword(email,pw).then(function(){
+        console.log('success');
+        alert('hiiii');
+        window.location.replace("index.html");
     }).catch(function(error){
-        console.log(error)
-    })
-})
-
+        console.log(error);
+    });
+});
+var user = firebase.auth().currentUser;
+setup();
+function setup(){
+  DB.ref("test").once('value').then(snapshot=>{
+    check();
+  });
+};
+  var check = () =>{
+    console.log(user);
+    if (user != null) {
+      console.log('success');
+      window.location.replace("index.html");
+    }
+  };
 signUp.addEventListener('click',function(){
   let email = document.getElementById("signUpEmail").value
   let pw = document.getElementById("signUpPw").value
@@ -27,7 +40,7 @@ signUp.addEventListener('click',function(){
   }).catch(function(error){
       alert("failed")
       console.log(error)
-      
+
   })
 })
 
