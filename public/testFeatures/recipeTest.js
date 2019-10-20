@@ -27,7 +27,7 @@ function recipeClicked(){ //once image is clicked, id is returned with the API d
 		servings: 0,
 	}
 	console.log(requestedItems)
-	postFood(); //call on the function stored in variable postFood 
+	postFood(); //call on the function stored in variable postFood
 	modalPopup(apiResult.results[this.id].title)
 
 }
@@ -101,17 +101,22 @@ function searchRecipe(){
 		        let pic = document.createElement('img');
 		        pic.classList.add('pic');
 		        pic.src = apiResult.results[i].image;
+						let infoButton = document.createElement("button");
+						infoButton.classList.add("infoButton");
+						infoButton.innerHTML = "Info";
 						let button = document.createElement("button");
-						button.classList.add("itemDesc");
+						button.classList.add("add");
 						button.innerHTML = "+";
 
 						item.setAttribute("class", "results");
-						button.setAttribute("id", i); 
+						button.setAttribute("id", i);
 		        item.appendChild(title);
 						item.appendChild(buffer);
 						item.addEventListener("click", recipeClicked);
 		        item.appendChild(pic);
+
 						item.appendChild(button);
+						item.appendChild(infoButton);
 		        document.getElementsByClassName("container")[0].appendChild(item);
 						/*
 						let y=document.createElement("img");
@@ -173,11 +178,11 @@ var postFood = () =>{
 	})
 	.then(response => {
 		response.json().then(data => {
-		let ingredientsList=data.extendedIngredients; //array of ingredients from API 
+		let ingredientsList=data.extendedIngredients; //array of ingredients from API
 		console.log(data)
 		console.log(ingredientsList)
 		/*
-		let finalIngredientPush=[]; //final ingredient list 
+		let finalIngredientPush=[]; //final ingredient list
 		ingredientsList.forEach(ingredient=>{
 			let currIngredient={
 				name:ingredient.original, //name of the ingredient
