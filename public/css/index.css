@@ -109,13 +109,14 @@ body{
 .material-icons.md { font-size: 5vw; }
 
 #bottomNav{
-  bottom:0;
-  position: absolute;
+  position: relative;
+  bottom: -12vh;
   background: #20B2AA;
   height: 8vh;
   width: 100%;
   padding-top:2vh;
   text-align: center;
+  z-index: 3;
 }
 #bottomNav div{
   color: white;
@@ -125,4 +126,9 @@ body{
 #bottomNav img{
   width: 8vw;
   margin-bottom: -1vh;
+}
+#list{
+  height: 0;
+  background-color: white;
+  z-index: 3;
 }
