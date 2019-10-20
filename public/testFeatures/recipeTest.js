@@ -26,6 +26,8 @@ function recipeClicked(){ //once image is clicked, id is returned with the API d
 		foodType: apiResult.results[this.id],
 		servings: 0,
 	}
+	console.log(requestedItems)
+	postFood(); //call on the function stored in variable postFood 
 	modalPopup(apiResult.results[this.id].title)
 
 }
@@ -133,6 +135,7 @@ function modalPopup(foodTitle){
 }
 
 var postFood = () =>{
+	alert('testing getting specific info for food')
 	let foodId=requestedItems.foodType.id;
 	fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"+foodId+"/information", {
 	"method": "GET",
@@ -144,6 +147,9 @@ var postFood = () =>{
 	.then(response => {
 		response.json().then(data => {
 		let ingredientsList=data.extendedIngredients; //array of ingredients from API 
+		console.log(data)
+		console.log(ingredientsList)
+		/*
 		let finalIngredientPush=[]; //final ingredient list 
 		ingredientsList.forEach(ingredient=>{
 			let currIngredient={
@@ -153,7 +159,7 @@ var postFood = () =>{
 			}
 			finalIngredientPush.add(currIngredient);
 		})
-		
+		*/
 		})
 
 		/*
