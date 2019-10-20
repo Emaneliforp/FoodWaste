@@ -103,17 +103,17 @@ function searchRecipe(){
 		        pic.src = apiResult.results[i].image;
 						let button = document.createElement("button");
 						button.classList.add("itemDesc");
-						button.innerHTML = "Trash Button";
+						button.innerHTML = "+";
 
 						item.setAttribute("class", "results");
-						item.setAttribute("id", i);
+						button.setAttribute("id", i); 
 		        item.appendChild(title);
 						item.appendChild(buffer);
 						item.addEventListener("click", recipeClicked);
 		        item.appendChild(pic);
 						item.appendChild(button);
 		        document.getElementsByClassName("container")[0].appendChild(item);
-/*
+						/*
 						let y=document.createElement("img");
 						y.setAttribute("src", apiResult.results[i].image);
 						y.setAttribute("class", "results"); //add class to delete all results at refresh
