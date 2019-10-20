@@ -26,6 +26,8 @@ function recipeClicked(){ //once image is clicked, id is returned with the API d
 		foodType: apiResult.results[this.id],
 		servings: 0,
 	}
+	console.log(requestedItems)
+	postFood(); //call on the function stored in variable postFood
 	modalPopup(apiResult.results[this.id].title)
 
 }
@@ -85,6 +87,41 @@ function searchRecipe(){
 						//x.setAttribute("id","result "+i);//give each result an id
 						// let y=document.createElement("checkbox")
 
+		        let item = document.createElement('div');
+		        item.classList.add('item');
+		        let title = document.createElement('div');
+		        title.classList.add('itemName');
+						var apiTitle = apiResult.results[i].title;
+						if(apiTitle.length < 45){
+		        	title.innerHTML = apiTitle;
+						}else{
+							title.innerHTML = apiTitle.substring(0, 40) + "...";
+						}
+						let buffer = document.createElement("br");
+		        let pic = document.createElement('img');
+		        pic.classList.add('pic');
+		        pic.src = apiResult.results[i].image;
+						let infoButton = document.createElement("button");
+						infoButton.classList.add("infoButton");
+						infoButton.innerHTML = "Info";
+						infoButton.setAttribute("id", i);
+						infoButton.addEventListener("click", recipeClicked);
+						
+						let button = document.createElement("button");
+						button.classList.add("add");
+						button.innerHTML = "+";
+
+						item.setAttribute("class", "results");
+						
+		        item.appendChild(title);
+						item.appendChild(buffer);
+						
+		        item.appendChild(pic);
+
+						item.appendChild(button);
+						item.appendChild(infoButton);
+		        document.getElementsByClassName("container")[0].appendChild(item);
+						/*
 						let y=document.createElement("img");
 						y.setAttribute("src", apiResult.results[i].image);
 						y.setAttribute("class", "results"); //add class to delete all results at refresh
@@ -133,13 +170,45 @@ function modalPopup(foodTitle){
 }
 
 var postFood = () =>{
-	// requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
-	requestedItems.servings = document.getElementById("number").value;
-	// foodtoBase.push(requestedItems[requestedItems.length-1]);
-	modal.style.display = "none";
-				FIREBASE_DATABASE.ref("recipesSent").push(requestedItems).then(function(){
-			  console.log("pushed yay");
-			});
+	alert('testing getting specific info for food')
+	let foodId=requestedItems.foodType.id;
+	fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"+foodId+"/information", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "9966bea103msh0223a37803d871bp18fb9djsn1b904a1380b2"
+	}
+	})
+	.then(response => {
+		response.json().then(data => {
+		let ingredientsList=data.extendedIngredients; //array of ingredients from API
+		console.log(data)
+		console.log(ingredientsList)
+		/*
+		let finalIngredientPush=[]; //final ingredient list
+		ingredientsList.forEach(ingredient=>{
+			let currIngredient={
+				name:ingredient.original, //name of the ingredient
+				amountUS: ingredient.measures.us, //amount of ingredient in US
+				amountMetric: ingredient.measures.metric //amount of ingredient in metric
+			}
+			finalIngredientPush.add(currIngredient);
+		})
+		*/
+		})
+
+		/*
+		requestedItems.servings = document.getElementById("number").value;
+		modal.style.display = "none";
+		FIREBASE_DATABASE.ref("recipesSent").push(requestedItems).then(function(){
+			console.log("pushed yay");
+		});
+		*/
+	})
+	.catch(err => {
+		console.log(err);
+	});
+
 }
 window.onclick = function(event) {
   if (event.target !== modal && (event.target).parentNode.id !== "foodModal" && event.target.className !== "inModal" && event.target.id == "numbersPeople") {
