@@ -5,21 +5,21 @@
 [debug] [2019-10-06T15:40:46.287Z] Node Version:  v12.6.0
 [debug] [2019-10-06T15:40:46.288Z] Time:          Sun Oct 06 2019 08:40:46 GMT-0700 (Pacific Daylight Time)
 [debug] [2019-10-06T15:40:46.288Z] ----------------------------------------------------------------------
-[debug] 
+[debug]
 [debug] [2019-10-06T15:40:46.295Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2019-10-06T15:40:46.295Z] > authorizing via signed-in user
 [debug] [2019-10-06T15:40:46.295Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
-[debug] [2019-10-06T15:40:46.297Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+[debug] [2019-10-06T15:40:46.297Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions
 
 [debug] [2019-10-06T15:40:46.748Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T15:40:46.750Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
- 
+[debug] [2019-10-06T15:40:46.750Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile
+
 [debug] [2019-10-06T15:40:47.124Z] <<< HTTP RESPONSE 200
-[info] 
+[info]
 [info] === Serving from 'C:\Users\Kyle Dang\Desktop\FoodWaste'...
-[info] 
-[debug] [2019-10-06T15:40:47.133Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
- 
+[info]
+[debug] [2019-10-06T15:40:47.133Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config
+
 [warn] !  Your requested "node" version "8" doesn't match your global version "12"
 [info] +  functions: Emulator started at http://localhost:5001
 [debug] [2019-10-06T15:40:47.646Z] <<< HTTP RESPONSE 200
@@ -39,21 +39,21 @@
 [debug] [2019-10-06T15:51:54.382Z] Node Version:  v8.11.3
 [debug] [2019-10-06T15:51:54.382Z] Time:          Sun Oct 06 2019 08:51:54 GMT-0700 (Pacific Daylight Time)
 [debug] [2019-10-06T15:51:54.382Z] ----------------------------------------------------------------------
-[debug] 
+[debug]
 [debug] [2019-10-06T15:51:54.394Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2019-10-06T15:51:54.396Z] > authorizing via signed-in user
 [debug] [2019-10-06T15:51:54.396Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
-[debug] [2019-10-06T15:51:54.397Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+[debug] [2019-10-06T15:51:54.397Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions
 
 [debug] [2019-10-06T15:51:54.963Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T15:51:54.965Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
- 
+[debug] [2019-10-06T15:51:54.965Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile
+
 [debug] [2019-10-06T15:51:55.572Z] <<< HTTP RESPONSE 200
-[info] 
+[info]
 [info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
-[info] 
-[debug] [2019-10-06T15:51:55.588Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
- 
+[info]
+[debug] [2019-10-06T15:51:55.588Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config
+
 [info] +  functions: Using node@8 from host.
 [info] +  functions: Emulator started at http://localhost:5001
 [debug] [2019-10-06T15:51:56.186Z] <<< HTTP RESPONSE 200
@@ -71,25 +71,25 @@
 [debug] [2019-10-06T16:51:46.499Z] Node Version:  v12.6.0
 [debug] [2019-10-06T16:51:46.500Z] Time:          Sun Oct 06 2019 09:51:46 GMT-0700 (Pacific Daylight Time)
 [debug] [2019-10-06T16:51:46.500Z] ----------------------------------------------------------------------
-[debug] 
+[debug]
 [debug] [2019-10-06T16:51:46.507Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2019-10-06T16:51:46.508Z] > authorizing via signed-in user
 [debug] [2019-10-06T16:51:46.508Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
 [debug] [2019-10-06T16:51:46.509Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2019-10-06T16:51:46.509Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2019-10-06T16:51:46.509Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
  <request body omitted>
 [debug] [2019-10-06T16:51:47.142Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T16:51:47.150Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+[debug] [2019-10-06T16:51:47.150Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions
 
 [debug] [2019-10-06T16:51:47.771Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T16:51:47.772Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
- 
+[debug] [2019-10-06T16:51:47.772Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile
+
 [debug] [2019-10-06T16:51:48.613Z] <<< HTTP RESPONSE 200
-[info] 
+[info]
 [info] === Serving from 'C:\Users\Kyle Dang\Desktop\FoodWaste'...
-[info] 
-[debug] [2019-10-06T16:51:48.619Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
- 
+[info]
+[debug] [2019-10-06T16:51:48.619Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config
+
 [warn] !  Your requested "node" version "8" doesn't match your global version "12"
 [info] +  functions: Emulator started at http://localhost:5001
 [debug] [2019-10-06T16:51:49.755Z] <<< HTTP RESPONSE 200
@@ -109,28 +109,28 @@
 [debug] [2019-10-06T15:35:31.330Z] Node Version:  v10.8.0
 [debug] [2019-10-06T15:35:31.333Z] Time:          Sun Oct 06 2019 08:35:31 GMT-0700 (Pacific Daylight Time)
 [debug] [2019-10-06T15:35:31.333Z] ----------------------------------------------------------------------
-[debug] 
+[debug]
 [debug] [2019-10-06T15:35:31.362Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2019-10-06T15:35:31.362Z] > authorizing via signed-in user
 [debug] [2019-10-06T15:35:31.363Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
 [debug] [2019-10-06T15:35:31.367Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2019-10-06T15:35:31.367Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2019-10-06T15:35:31.367Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
  <request body omitted>
 [debug] [2019-10-06T15:35:31.989Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T15:35:31.997Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+[debug] [2019-10-06T15:35:31.997Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions
 
 [debug] [2019-10-06T15:35:33.101Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T15:35:33.102Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
- 
+[debug] [2019-10-06T15:35:33.102Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile
+
 [debug] [2019-10-06T15:35:33.510Z] <<< HTTP RESPONSE 200
-[info] 
+[info]
 [info] === Serving from 'C:\Users\kietc\Desktop\FoodWaste'...
-[info] 
-[debug] [2019-10-06T15:35:33.527Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
- 
+[info]
+[debug] [2019-10-06T15:35:33.527Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config
+
 [warn] !  Your requested "node" version "8" doesn't match your global version "10"
-[debug] [2019-10-06T15:35:33.556Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/adminSdkConfig  
- 
+[debug] [2019-10-06T15:35:33.556Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/adminSdkConfig
+
 [debug] [2019-10-06T15:35:33.870Z] <<< HTTP RESPONSE 200
 [debug] [2019-10-06T15:35:34.007Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
@@ -149,25 +149,25 @@
 [debug] [2019-10-06T17:23:57.576Z] Node Version:  v8.11.3
 [debug] [2019-10-06T17:23:57.576Z] Time:          Sun Oct 06 2019 10:23:57 GMT-0700 (Pacific Daylight Time)
 [debug] [2019-10-06T17:23:57.576Z] ----------------------------------------------------------------------
-[debug] 
+[debug]
 [debug] [2019-10-06T17:23:57.586Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
 [debug] [2019-10-06T17:23:57.587Z] > authorizing via signed-in user
 [debug] [2019-10-06T17:23:57.587Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
 [debug] [2019-10-06T17:23:57.589Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2019-10-06T17:23:57.589Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+[debug] [2019-10-06T17:23:57.589Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token
  <request body omitted>
 [debug] [2019-10-06T17:23:57.856Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T17:23:57.921Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+[debug] [2019-10-06T17:23:57.921Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions
 
 [debug] [2019-10-06T17:23:58.332Z] <<< HTTP RESPONSE 200
-[debug] [2019-10-06T17:23:58.335Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
- 
+[debug] [2019-10-06T17:23:58.335Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile
+
 [debug] [2019-10-06T17:23:58.731Z] <<< HTTP RESPONSE 200
-[info] 
+[info]
 [info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
-[info] 
-[debug] [2019-10-06T17:23:58.743Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
- 
+[info]
+[debug] [2019-10-06T17:23:58.743Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config
+
 [info] +  functions: Using node@8 from host.
 [info] +  functions: Emulator started at http://localhost:5001
 [debug] [2019-10-06T17:23:59.348Z] <<< HTTP RESPONSE 200

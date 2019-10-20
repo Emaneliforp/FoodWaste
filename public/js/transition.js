@@ -1,9 +1,12 @@
 let date = document.getElementsByClassName('space');
 
-console.log("hi");
+function ready(d){
+console.log("hiIIIIIIIIIIIIII");
 for(let i = 0; i<date.length; i++){
-    date[i].addEventLister('click',function(){storeDate(this)});
+    console.log('Troll');
+    date[i].addEventListener('click',function(){storeDate(this,d)});
 }
-function storeDate(x){
-    console.log(x);
+}
+function storeDate(x,d){
+    console.log(x.textContent+" "+d.getMonth()+" "+d.getYear());
 }

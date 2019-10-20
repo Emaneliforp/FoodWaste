@@ -19,7 +19,8 @@ function setup(){
   DB.ref("test").once('value').then(snapshot =>{
     loading.style.display = "none";
     loaded.style.display = "block";
-    generate(generateCal(updateDate(currentDate)))
+    generate(generateCal(updateDate(currentDate)));
+    ready(virtualDate);
   });
 }
 DB.ref("test").once('value').then(snapshot=>{
