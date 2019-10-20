@@ -2,7 +2,7 @@
    font-family: 'Quicksand', sans-serif;
 }
 body{
-  background-color: #b1f8f2;
+  background-color: #eeeeee;
 }
 #block{
   background-color: #15c39a;
@@ -67,6 +67,7 @@ body{
   display: none;
   background-color: white;
   margin-top: 30vh;
+  z-index: 10;
 }
 #foodModal button{
   margin-top: 2vh;
@@ -81,12 +82,42 @@ body{
 }
 /*new changes*/
 .container{
-  width: 90vw;
+  width: 95vw;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  background-color: transparent;
   min-height: 100vh;
   text-align: center;
-  padding-top: 5vh;
+  padding-top: 3vh;
   padding-bottom: 2vh;
+}
+.results{
+  border: 0px solid black;
+  border-radius: 5px;
+  height: 15vh;
+}
+.results{
+    background: white;
+    border-radius: 1vw;
+    padding:2vw;
+    margin-top: 2vh;
+}
+.results .itemName{
+    color:#20B2AA;
+    float: left;
+    margin-right: 5vw;
+    display: block;
+    font-weight: 900;
+}
+.results img{
+    position: relative;
+    width: 25vw;
+    float: left;
+    margin-left: 3vw;
+    margin-top: 2vw;
+    z-index: 0;
+
+}
+.results button{
+  float: right;
 }

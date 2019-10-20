@@ -1,0 +1,37 @@
+[debug] [2019-10-20T16:25:03.487Z] ----------------------------------------------------------------------
+[debug] [2019-10-20T16:25:03.495Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\enemy\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-10-20T16:25:03.495Z] CLI Version:   7.3.2
+[debug] [2019-10-20T16:25:03.496Z] Platform:      win32
+[debug] [2019-10-20T16:25:03.496Z] Node Version:  v8.11.3
+[debug] [2019-10-20T16:25:03.498Z] Time:          Sun Oct 20 2019 09:25:03 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-10-20T16:25:03.499Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-20T16:25:03.541Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-20T16:25:03.543Z] > authorizing via signed-in user
+[debug] [2019-10-20T16:25:03.543Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-10-20T16:25:03.546Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-10-20T16:25:03.546Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-10-20T16:25:04.078Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-20T16:25:04.120Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-10-20T16:25:04.712Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-20T16:25:04.715Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-10-20T16:25:05.295Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\enemy\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-10-20T16:25:13.157Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[info] +  functions: Using node@8 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-10-20T16:25:13.810Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\enemy\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-10-20T16:25:15.279Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions","node_version":"8.11.3"}
+[debug] [2019-10-20T16:25:15.279Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-20T16:25:15.299Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\enemy\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
