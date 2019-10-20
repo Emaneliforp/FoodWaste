@@ -64,3 +64,36 @@
 [debug] [2019-10-20T18:31:09.483Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\Kyle Dang\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
 [warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
 [info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)
+[debug] [2019-10-20T18:41:12.566Z] ----------------------------------------------------------------------
+[debug] [2019-10-20T18:41:12.574Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Kyle Dang\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-10-20T18:41:12.575Z] CLI Version:   7.3.2
+[debug] [2019-10-20T18:41:12.575Z] Platform:      win32
+[debug] [2019-10-20T18:41:12.575Z] Node Version:  v12.6.0
+[debug] [2019-10-20T18:41:12.578Z] Time:          Sun Oct 20 2019 11:41:12 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-10-20T18:41:12.578Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-10-20T18:41:12.607Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-10-20T18:41:12.611Z] > authorizing via signed-in user
+[debug] [2019-10-20T18:41:12.612Z] [iam] checking project master-food-mobile for permissions ["firebase.projects.get"]
+[debug] [2019-10-20T18:41:12.618Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/master-food-mobile:testIamPermissions  
+
+[debug] [2019-10-20T18:41:13.164Z] <<< HTTP RESPONSE 200
+[debug] [2019-10-20T18:41:13.171Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile  
+ 
+[debug] [2019-10-20T18:41:13.978Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Kyle Dang\Desktop\FoodWaste'...
+[info] 
+[debug] [2019-10-20T18:41:13.997Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/master-food-mobile/webApps/-/config  
+ 
+[warn] !  Your requested "node" version "8" doesn't match your global version "12"
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-10-20T18:41:14.791Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "C:\Users\Kyle Dang\Desktop\FoodWaste\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-10-20T18:41:16.796Z] [runtime-status] Functions runtime initialized. {"cwd":"C:\\Users\\Kyle Dang\\Desktop\\FoodWaste\\functions","node_version":"12.6.0"}
+[debug] [2019-10-20T18:41:16.797Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-10-20T18:41:16.816Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"5.13.1","resolution":"C:\\Users\\Kyle Dang\\Desktop\\FoodWaste\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[warn] !  The Cloud Functions emulator requires the module "firebase-admin" to be version >8.0.0 so your version is too old. You can probably fix this by running "npm install firebase-admin@latest" in your functions directory.
+[info] i  functions: Your functions could not be parsed due to an issue with your node_modules (see above)

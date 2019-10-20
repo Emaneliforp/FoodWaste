@@ -104,15 +104,18 @@ function searchRecipe(){
 						let infoButton = document.createElement("button");
 						infoButton.classList.add("infoButton");
 						infoButton.innerHTML = "Info";
+						infoButton.setAttribute("id", i);
+						infoButton.addEventListener("click", recipeClicked);
+						
 						let button = document.createElement("button");
 						button.classList.add("add");
 						button.innerHTML = "+";
 
 						item.setAttribute("class", "results");
-						button.setAttribute("id", i);
+						
 		        item.appendChild(title);
 						item.appendChild(buffer);
-						item.addEventListener("click", recipeClicked);
+						
 		        item.appendChild(pic);
 
 						item.appendChild(button);
