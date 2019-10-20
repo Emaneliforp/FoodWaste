@@ -133,13 +133,41 @@ function modalPopup(foodTitle){
 }
 
 var postFood = () =>{
-	// requestedItems[requestedItems.length-1].servings = document.getElementById("number").value;
-	requestedItems.servings = document.getElementById("number").value;
-	// foodtoBase.push(requestedItems[requestedItems.length-1]);
-	modal.style.display = "none";
-				FIREBASE_DATABASE.ref("recipesSent").push(requestedItems).then(function(){
-			  console.log("pushed yay");
-			});
+	let foodId=requestedItems.foodType.id;
+	fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"+foodId+"/information", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+		"x-rapidapi-key": "9966bea103msh0223a37803d871bp18fb9djsn1b904a1380b2"
+	}
+	})
+	.then(response => {
+		response.json().then(data => {
+		let ingredientsList=data.extendedIngredients; //array of ingredients from API 
+		let finalIngredientPush=[]; //final ingredient list 
+		ingredientsList.forEach(ingredient=>{
+			let currIngredient={
+				name:ingredient.original, //name of the ingredient 
+				amountUS: ingredient.measures.us, //amount of ingredient in US 
+				amountMetric: ingredient.measures.metric //amount of ingredient in metric
+			}
+			finalIngredientPush.add(currIngredient);
+		})
+		
+		})
+
+		/*
+		requestedItems.servings = document.getElementById("number").value;
+		modal.style.display = "none";
+		FIREBASE_DATABASE.ref("recipesSent").push(requestedItems).then(function(){
+			console.log("pushed yay");
+		});
+		*/
+	})
+	.catch(err => {
+		console.log(err);
+	});
+	
 }
 window.onclick = function(event) {
   if (event.target !== modal && (event.target).parentNode.id !== "foodModal" && event.target.className !== "inModal" && event.target.id == "numbersPeople") {
