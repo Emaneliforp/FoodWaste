@@ -19,7 +19,8 @@ function setup(){
   DB.ref("test").once('value').then(snapshot =>{
     loading.style.display = "none";
     loaded.style.display = "block";
-    generate(generateCal(updateDate(currentDate)));
+    generate(updateEvent(generateCal(updateDate(currentDate))));
+    updateDate
     ready(virtualDate);
   });
 }
@@ -93,6 +94,7 @@ function generateCal(obj){
   return arr;
 }
 function updateEvent(arr){
+  console.log("hi");
   for(let i = 0; i < arr.length; i++){
     //((x % divisor) + divisor) % divisor
     DB.ref(`/events/${arr[i][2]-1900}/${(((arr[i][1])%12)+12)%12}/${arr[i][0]}`).once('value').then(snapshot => {
@@ -102,9 +104,9 @@ function updateEvent(arr){
         arr[i].push(eventCache[a].title);
       }
     }
-      start();
     });
   }
+  console.log(arr);
   return arr;
 }
 function generateSpace(arr){
@@ -117,7 +119,6 @@ function generateSpace(arr){
       space.classList.add('spaceList');
     }
     dt.classList.add('dt');
-    console.log(arr[0]+" "+currentDate.getDate()+", "+arr[1]+" "+(currentDate.getMonth()+1)+", "+arr[2]+" "+currentDate.getYear());
     if(arr[0] == currentDate.getDate()&&arr[1] == (currentDate.getMonth()+1)&&arr[2] == currentDate.getYear()){
       space.classList.add('curDate');
     }
@@ -177,14 +178,12 @@ let posX;
 function lock(x){
   if(x.changedTouches!=null){
     posX = x.changedTouches[0].screenX;
-    console.log(posX);
   }
 }
 let posXf;
 function move(x){
   if(x.changedTouches!=null){
   posXf = x.changedTouches[0].screenX;
-  console.log(posXf);
   if(posXf-posX<-50){addMonth()}
   if(posXf-posX>50){minusMonth()}
   }

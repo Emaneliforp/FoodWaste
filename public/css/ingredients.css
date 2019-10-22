@@ -51,11 +51,66 @@ body{
     font-weight: 900;
 }
 .item img{
-    width:20vw;
+    height:20vw;
     display: inline-block;
 }
-.item .quan{
+.item .info{
     display: inline-block;
+    width: 70%;
     vertical-align: top;
-    margin-left: 1vw;
+    margin-left: 5vw;
+}
+.item .but{
+    font-size: 4vw;
+    font-weight: 900;
+    color: white;
+    padding: 1vw;
+    width: 10vw;
+    margin-top: 1vw;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #20B2AA;
+}
+#modal{
+    display: none;
+    text-align: center;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2vh;
+    width: 90vw;
+    border-radius: 5px;
+    box-shadow: 5px 5px 14px 5px rgba(0,0,0,0.27);
+    z-index: 3;
+    position: absolute;
+    top: 20vh;
+    left: 5vw;
+}
+#edit{
+    background-color: #20B2AA;
+    font-weight: 900;
+    font-size: 5vw;
+    color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding:1.5vw;
+}
+.editInput{
+    padding-top:4vw;
+}
+.editInput input{
+    border:none;
+    border-bottom: solid 1px #BAB8B6;
+}
+#save{
+    font-size: 4vw;
+    font-weight: 900;
+    color: white;
+    padding: 1vw;
+    margin-top: 5vw;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #20B2AA;
 }
