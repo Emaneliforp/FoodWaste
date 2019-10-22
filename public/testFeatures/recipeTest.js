@@ -14,8 +14,10 @@ FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until curre
   });
 */
 function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
+	alert('hi')
 	console.log(this) //use this to get everything out of the clicked item
 	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
+	
 	/*
 	requestedItems.push({
 		foodType: apiResult.results[this.id],
@@ -27,9 +29,15 @@ function recipeClicked(){ //once image is clicked, id is returned with the API d
 		servings: 0,
 	}
 	console.log(requestedItems)
-	postFood(); //call on the function stored in variable postFood
-	modalPopup(apiResult.results[this.id].title)
 
+	//postFood(); //call on the function stored in variable postFood
+	
+	/*
+	if(modalSet){ //true/false if modal should popup
+		modalPopup(apiResult.results[this.id].title)
+	}
+	*/
+	
 }
 
 
@@ -110,6 +118,9 @@ function searchRecipe(){
 						let button = document.createElement("button");
 						button.classList.add("add");
 						button.innerHTML = "+";
+						button.addEventListener("click",recipeClicked)
+						
+
 
 						item.setAttribute("class", "results");
 						
