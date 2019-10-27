@@ -13,22 +13,28 @@ FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until curre
     }
   });
 */
-function recipeClicked(){ //once image is clicked, id is returned with the API data of the item
+
+function recipeClicked(modalSet, id){ //once image is clicked, id is returned with the API data of the item
+	alert('hi')
 	console.log(this) //use this to get everything out of the clicked item
-	console.log(apiResult.results[this.id]) //retrieves the original info from API for the clicked item
-	/*
-	requestedItems.push({
-		foodType: apiResult.results[this.id],
-		servings: 0,
-	});
-	*/
+	console.log(apiResult.results[id]) //retrieves the original info from API for the clicked item
+
+
+
+
 	requestedItems={
-		foodType: apiResult.results[this.id],
+		foodType: apiResult.results[id],
 		servings: 0,
 	}
 	console.log(requestedItems)
-	postFood(); //call on the function stored in variable postFood
-	modalPopup(apiResult.results[this.id].title)
+
+	postFood(); 
+
+
+	if(modalSet){ //true/false if modal should popup
+		modalPopup(apiResult.results[id].title)
+	}
+
 
 }
 
@@ -95,7 +101,7 @@ function searchRecipe(){
 						if(apiTitle.length < 45){
 		        	title.innerHTML = apiTitle;
 						}else{
-							title.innerHTML = apiTitle.substring(0, 40) + "...";
+							title.innerHTML = apiTitle.substring(0, 10) + "...";
 						}
 						let buffer = document.createElement("br");
 		        let pic = document.createElement('img');
@@ -105,17 +111,20 @@ function searchRecipe(){
 						infoButton.classList.add("infoButton");
 						infoButton.innerHTML = "Info";
 						infoButton.setAttribute("id", i);
-						infoButton.addEventListener("click", recipeClicked);
-						
+						infoButton.addEventListener("click", function(){recipeClicked(false, i)});
+
 						let button = document.createElement("button");
 						button.classList.add("add");
 						button.innerHTML = "+";
+						button.addEventListener("click", function(){recipeClicked(true, i)})
+
+
 
 						item.setAttribute("class", "results");
-						
+
 		        item.appendChild(title);
 						item.appendChild(buffer);
-						
+
 		        item.appendChild(pic);
 
 						item.appendChild(button);
@@ -170,8 +179,11 @@ function modalPopup(foodTitle){
 }
 
 var postFood = () =>{
+	requestedItems.servings = document.getElementById("number").value;
+	document.getElementById("foodModal").style.display = "none";
 	alert('testing getting specific info for food')
 	let foodId=requestedItems.foodType.id;
+	console.log("foodId: "+foodId)
 	fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"+foodId+"/information", {
 	"method": "GET",
 	"headers": {
@@ -183,7 +195,8 @@ var postFood = () =>{
 		response.json().then(data => {
 		let ingredientsList=data.extendedIngredients; //array of ingredients from API
 		console.log(data)
-		console.log(ingredientsList)
+		console.log(ingredientsList);
+		console.log(foodId);
 		/*
 		let finalIngredientPush=[]; //final ingredient list
 		ingredientsList.forEach(ingredient=>{
@@ -196,9 +209,7 @@ var postFood = () =>{
 		})
 		*/
 		})
-
 		/*
-		requestedItems.servings = document.getElementById("number").value;
 		modal.style.display = "none";
 		FIREBASE_DATABASE.ref("recipesSent").push(requestedItems).then(function(){
 			console.log("pushed yay");
@@ -210,6 +221,7 @@ var postFood = () =>{
 	});
 
 }
+
 window.onclick = function(event) {
   if (event.target !== modal && (event.target).parentNode.id !== "foodModal" && event.target.className !== "inModal" && event.target.id == "numbersPeople") {
     modal.style.display = "none";
