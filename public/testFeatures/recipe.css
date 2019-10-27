@@ -137,3 +137,25 @@ body{
 color: #20b2aa;
   margin-right: 2vw;
 }
+#infoModal{
+  background-color: white;
+  text-align: center;
+  width: 95vw;
+  position: fixed;
+  z-index: 2;
+  top: 30vh;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+.close{
+  float: right;
+  margin-right: 2vw;
+  font-size: 32px;
+  margin-top: -1.7vh;
+}
+#infoTitle{
+  font-size: 25px;
+}
+#information{
+  font-size:15px;
+}
