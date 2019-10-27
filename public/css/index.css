@@ -119,16 +119,62 @@ body{
   z-index: 3;
 }
 #bottomNav div{
-  color: white;
-  display: inline-block;
   font-weight: 900;
 }
-#bottomNav img{
+#sl{
+  display: inline-block;
+  color: white;
+}
+#bottomNav #sc{
+  display: inline-block;
+  color: white;
   width: 8vw;
   margin-bottom: -1vh;
 }
 #list{
-  height: 0;
-  background-color: white;
+  visibility: hidden;
+  margin-top: 1.5vh;
+  width:90vw;
+  background-color:#EEEEEE;
   z-index: 3;
+  padding: 5vw;
+  overflow-x: auto;
+
+}
+
+.item{
+  background: white;
+  border-radius: 2vw;
+  margin-top: 2vh;
+  padding: 2vw;
+}
+.item .itemName{
+  color:#20B2AA;
+  font-weight: 900;
+}
+.item img{
+  height:18vw;
+  max-width: 25vw;
+  display: inline-block;
+}
+.item .info{
+  float: right;
+  padding-right: 2vw;
+  width: 50vw;
+  vertical-align: top;
+  margin-top:1vh;
+}
+.item .but{
+  font-size: 4vw;
+  font-weight: 900;
+  color: white;
+  padding: 1vw;
+  width: 10vw;
+  margin-top: 1vw;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #20B2AA;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
 }

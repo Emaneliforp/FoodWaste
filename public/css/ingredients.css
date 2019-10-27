@@ -53,10 +53,11 @@ body{
 .item img{
     height:20vw;
     display: inline-block;
+    max-width: 25vw;
 }
 .item .info{
     display: inline-block;
-    width: 70%;
+    width: 50vw;
     vertical-align: top;
     margin-left: 5vw;
 }
