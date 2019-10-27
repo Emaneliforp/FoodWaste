@@ -28,7 +28,7 @@ function recipeClicked(modalSet, id){ //once image is clicked, id is returned wi
 	}
 	console.log(requestedItems)
 
-	//postFood(); //call on the function stored in variable postFood
+	postFood(); 
 
 
 	if(modalSet){ //true/false if modal should popup
@@ -101,7 +101,7 @@ function searchRecipe(){
 						if(apiTitle.length < 45){
 		        	title.innerHTML = apiTitle;
 						}else{
-							title.innerHTML = apiTitle.substring(0, 40) + "...";
+							title.innerHTML = apiTitle.substring(0, 10) + "...";
 						}
 						let buffer = document.createElement("br");
 		        let pic = document.createElement('img');
@@ -182,7 +182,8 @@ var postFood = () =>{
 	requestedItems.servings = document.getElementById("number").value;
 	document.getElementById("foodModal").style.display = "none";
 	alert('testing getting specific info for food')
-	let foodId=requestedItems.foodType;
+	let foodId=requestedItems.foodType.id;
+	console.log("foodId: "+foodId)
 	fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"+foodId+"/information", {
 	"method": "GET",
 	"headers": {
