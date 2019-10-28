@@ -29,7 +29,7 @@ function recipeClicked(modalSet, id){ //once image is clicked, id is returned wi
 	console.log(requestedItems)
 
 	postFood(); 
-
+	
 
 	if(modalSet){ //true/false if modal should popup
 		modalPopup(apiResult.results[id].title)
