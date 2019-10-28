@@ -1,6 +1,8 @@
 const FIREBASE_DATABASE = firebase.database();
 let apiResult; //result object returned from API (further processing is needed to see actual text data )
-
+let ingredientList;
+let instructions;
+let servings;
 /*
 FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until current user is fully initialized, before trying to capture user ID
     if (user) { //tests to make sure current user is not null
@@ -15,9 +17,9 @@ FIREBASE_DATABASE.auth().onAuthStateChanged(function(user) { //waits until curre
 */
 
 function recipeClicked(modalSet, id){ //once image is clicked, id is returned with the API data of the item
-	alert('hi')
-	console.log(this) //use this to get everything out of the clicked item
-	console.log(apiResult.results[id]) //retrieves the original info from API for the clicked item
+	
+	//console.log(this) //use this to get everything out of the clicked item
+	//console.log("apiresult xd "+apiResult.results[id]) //retrieves the original info from API for the clicked item
 
 
 
@@ -34,12 +36,41 @@ function recipeClicked(modalSet, id){ //once image is clicked, id is returned wi
 	if(modalSet){ //true/false if modal should popup
 		modalPopup(apiResult.results[id].title)
 	}else{
+		console.log("<-----MODAL INFO------>")
+		
+		console.log("title of food: "+requestedItems.foodType.title);
+		
+		console.log("Ingredients: ")
+		console.log("1 peeled carrot")
+		console.log("1 400g can chickpeas")
+		console.log("1 chopped onion")
+		console.log("2 tbsp tahini-paste")
+		console.log("1 tsp ground cumin")
+		console.log("1 egg")
+		console.log("3 tbsp olive oil")
+		console.log("100g breadcrumbs")
+		console.log("1 tsp lemon juice and zest")
+		console.log("150 mL natural yogurt")
+		console.log("6 french rolls")
+		console.log("3 tbsp sesame seeds")
+		
+		console.log("Steps:")
+		console.log("1. Put a third of the grated carrot in a food processor with the chickpeas, onion, 2 tbsp tahini, cumin and egg. Whizz to a thick paste, then scrape into a large bowl.")
+		console.log("2. Heat 1 tbsp oil in your largest frying pan, tip in the remaining carrot and cook for 8-10 mins, stirring until the carrot is softened  it will become more golden as it is cooked.")
+		console.log("3. Add this cooked carrot to the whizzed paste with the breadcrumbs, lemon zest and sesame seeds.")
+		console.log("4. Add seasoning, then mix together well with your hands.")
+		console.log("5. Divide the mixture into 6, then using wet hands shape into burgers. Cover and chill until serving.")
+		console.log("6. Mix the yogurt with the remaining tahini and lemon juice, then chill.")
+		console.log("7. Fire up the barbecue, or heat a non-stick frying pan and brush the burgers with the remaining oil. Cook the burgers for 5 mins on each side, until golden and crisp. Meanwhile warm or toast the buns (or sit them on the barbecue alongside the burgers). When the burgers are ready, spread each bun with some of the lemony sesame yogurt, add the avocado, top with the burger, onion and rocket. Finish with a drizzle of chilli sauce.")
 		//console all the modal info here, then i will create a function for it (Title, Desc, diet, ingredients, instructions)
+	
+		console.log("Servings")
+		console.log("6")
 	}
 
 
 }
-function infoPopup
+
 
 function deleteChildrens(){ //clear search results
 	let removeElements = (elms) => elms.forEach(el => el.remove());
@@ -63,6 +94,7 @@ function searchRecipe(){
 			finalParams[term]=document.getElementById(allSearchParams[i]).value.replace(/,/g,"%2C%20"); //take the input from text box, replace commas entered by the user with the proper separating punctuation %2C%20
 		}
 		else{ //if the user enters N/A in a textbox, or the textbox is left empty, an empty string is sent for the parameter
+			
 			finalParams[term]="";
 		}
 	}
@@ -197,8 +229,9 @@ var postFood = () =>{
 		response.json().then(data => {
 		let ingredientsList=data.extendedIngredients; //array of ingredients from API
 		console.log(data)
-		console.log(ingredientsList);
-		console.log(foodId);
+		ingredientsList=data.extendedIngredients;
+		instructions=data.analyzedInstructions[0].steps;
+
 		/*
 		let finalIngredientPush=[]; //final ingredient list
 		ingredientsList.forEach(ingredient=>{
