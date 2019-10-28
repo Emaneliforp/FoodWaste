@@ -28,16 +28,18 @@ function recipeClicked(modalSet, id){ //once image is clicked, id is returned wi
 	}
 	console.log(requestedItems)
 
-	postFood(); 
+	postFood();
 
 
 	if(modalSet){ //true/false if modal should popup
 		modalPopup(apiResult.results[id].title)
+	}else{
+		//console all the modal info here, then i will create a function for it (Title, Desc, diet, ingredients, instructions)
 	}
 
 
 }
-
+function infoPopup
 
 function deleteChildrens(){ //clear search results
 	let removeElements = (elms) => elms.forEach(el => el.remove());

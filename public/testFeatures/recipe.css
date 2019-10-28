@@ -146,6 +146,7 @@ color: #20b2aa;
   top: 30vh;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
+  display: none;
 }
 .close{
   float: right;
