@@ -143,10 +143,11 @@ color: #20b2aa;
   width: 95vw;
   position: fixed;
   z-index: 2;
-  top: 30vh;
+  top: 15vh;
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
   display: none;
+  overflow: scroll;
 }
 .close{
   float: right;
@@ -158,5 +159,8 @@ color: #20b2aa;
   font-size: 25px;
 }
 #information{
-  font-size:15px;
+  font-size:10px;
+}
+#modalInstr{
+  text-align: left;
 }
