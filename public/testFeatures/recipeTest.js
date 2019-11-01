@@ -195,7 +195,6 @@ function modalPopup(foodTitle){
 var postFood = () =>{
 	requestedItems.servings = document.getElementById("number").value;
 	document.getElementById("foodModal").style.display = "none";
-	alert('testing getting specific info for food')
 	let foodId=requestedItems.foodType.id;
 	console.log("foodId: "+foodId)
 	fetch("https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/"+foodId+"/information", {
