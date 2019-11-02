@@ -57,7 +57,7 @@ body{
   font-size: 6vw;
 }
 #foodModal{
-  position: absolute;
+  position: fixed;
   border-radius: 10px;
   border: 5px black solid;
   width: 80vw;
